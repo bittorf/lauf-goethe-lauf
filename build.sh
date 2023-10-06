@@ -16,7 +16,7 @@ mkdir -p dest
 cp -v flyer-crop-32cols-1920wide.webp dest/1.webp
 
 {
-echo "<html>"
+echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
 echo "<style>"
@@ -26,7 +26,7 @@ echo "}"
 echo "</style>"
 echo "</head>"
 
-echo "<body bgcolor=white>"
+echo "<body>"
 echo "<div class=container>"
 echo "<details>"
 echo "<summary>Impressum &amp; Kontakt</summary>"
@@ -45,11 +45,11 @@ Telefon:      015906768155
 E-Mail:       info@lauf-goethe-lauf.de
 
 ORGA-Team:    Dr. Barbara Köllner, David Bauer, Dr. Hendrik Schröter
-<pre>
+</pre>
 EOF
 
 echo "</div>"
-echo "</details"
+echo "</details>"
 echo "</div>"
 
 echo "<body></html>"
