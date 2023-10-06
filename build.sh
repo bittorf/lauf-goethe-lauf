@@ -16,6 +16,7 @@ mkdir -p dest
 cp -v flyer-crop-32cols-1920wide.webp dest/1.webp
 
 {
+echo '<!DOCTYPE html>'
 echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
@@ -52,7 +53,7 @@ echo "</div>"
 echo "</details>"
 echo "</div>"
 
-echo "<body></html>"
+echo "</body></html>"
 
 } >"dest/index.html"
 
