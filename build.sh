@@ -19,7 +19,28 @@ cp -v flyer-crop-32cols-1920wide.webp dest/1.webp
 echo '<!DOCTYPE html>'
 echo "<html lang=de>"
 
-echo "<head><title>Lauf Goethe!</title></head>"
+echo "<head><title>Lauf Goethe!</title>"
+
+# https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
+cat <<EOF
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+.imgbox {
+display: grid;
+height: 100%;
+}
+.center-fit {
+max-width: 100%;
+max-height: 100vh;
+margin: auto;
+}
+</style>
+EOF
+
+echo "</head>"
 
 echo "<body>"
 echo "<div class=container>"
@@ -46,7 +67,9 @@ EOF
 echo "</div>"
 echo "</details>"
 echo "</div>"
-echo "<img src='1.webp' alt='Veranstaltungsdatum 24.08.2024'>"
+echo "<div class='imgbox'>"
+echo "<img class='center-fit' src='1.webp' alt='Veranstaltungsdatum 24.08.2024'>"
+echo "</div>"
 echo "</body></html>"
 
 } >"dest/index.html"
