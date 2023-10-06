@@ -50,13 +50,14 @@ echo "<div>"
 
 cat <<EOF
 <pre>
+
 Veranstalter: Dr. Barbara Köllner, David Bauer
 
 Anschrift:    Dr. Barbara Köllner
               Neuer Herrenweg 10
               99428 Weimar
 
-Telefon:      015906768155
+Telefon:      0159 / 067 681 55
 
 E-Mail:       info@lauf-goethe-lauf.de
 
