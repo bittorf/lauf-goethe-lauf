@@ -21,7 +21,7 @@ echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
 echo "<style>"
-echo "p {"
+echo "body {"
 echo "  background-image: url('1.webp');"
 echo "}"
 echo "</style>"
