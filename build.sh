@@ -19,13 +19,7 @@ cp -v flyer-crop-32cols-1920wide.webp dest/1.webp
 echo '<!DOCTYPE html>'
 echo "<html lang=de>"
 
-echo "<head><title>Lauf Goethe!</title>"
-echo "<style>"
-echo "body {"
-echo "  background-image: url('1.webp');"
-echo "}"
-echo "</style>"
-echo "</head>"
+echo "<head><title>Lauf Goethe!</title></head>"
 
 echo "<body>"
 echo "<div class=container>"
@@ -52,7 +46,7 @@ EOF
 echo "</div>"
 echo "</details>"
 echo "</div>"
-
+echo "<img src='1.webp' alt='Veranstaltungsdatum 24.08.2024'>"
 echo "</body></html>"
 
 } >"dest/index.html"
