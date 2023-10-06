@@ -20,6 +20,7 @@ echo '<!DOCTYPE html>'
 echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
+echo '<link rel=icon href=data:,>'
 
 # https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
 cat <<EOF
@@ -40,6 +41,8 @@ margin: auto;
 </style>
 EOF
 
+OE='&ouml;'
+
 echo "</head>"
 
 echo "<body>"
@@ -51,9 +54,9 @@ echo "<div>"
 cat <<EOF
 <pre>
 
-Veranstalter: Dr. Barbara Köllner, David Bauer
+Veranstalter: Dr. Barbara K${OE}llner, David Bauer
 
-Anschrift:    Dr. Barbara Köllner
+Anschrift:    Dr. Barbara K${OE}llner
               Neuer Herrenweg 10
               99428 Weimar
 
@@ -61,7 +64,7 @@ Telefon:      0159 / 067 681 55
 
 E-Mail:       info@lauf-goethe-lauf.de
 
-ORGA-Team:    Dr. Barbara Köllner, David Bauer, Dr. Hendrik Schröter
+ORGA-Team:    Dr. Barbara K${OE}llner, David Bauer, Dr. Hendrik Schr${OE}ter
 </pre>
 EOF
 
