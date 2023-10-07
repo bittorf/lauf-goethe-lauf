@@ -21,6 +21,7 @@ echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
 echo '<link rel=icon href=data:,>'
+echo '<meta name="keywords" content="Staffellauf, Lauf, Fitness, Weimar, Gro&szligkochberg, Großkochberg, Groskochberg, Benefiz, Wohltätigkeit, Spendenlauf, Veranstaltung">'
 
 # https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
 cat <<EOF
