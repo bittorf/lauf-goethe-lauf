@@ -15,6 +15,7 @@ echo "##################"
 mkdir -p dest
 
 cp -v flyer-crop-32cols-1920wide.webp dest/1.webp
+cp -v flyer-crop-32cols-1920wide.png  dest/1.png
 
 {
 echo '<!DOCTYPE html>'
@@ -74,9 +75,18 @@ EOF
 echo "</div>"
 echo "</details>"
 echo "</div>"
-echo "<div class='imgbox'>"
-echo "<img class='center-fit' src='1.webp' alt='Veranstaltungsdatum 24.08.2024'>"
-echo "</div>"
+
+cat <<EOF
+
+<div class='imgbox'>
+ <picture>
+  <source srcset="1.webp" type="image/webp">
+  <img src='1.png' alt='Veranstaltungsdatum 24.08.2024' class='center-fit'>
+ </picture>
+</div>
+
+EOF
+
 echo "</body></html>"
 
 } >"dest/index.html"
