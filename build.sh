@@ -81,6 +81,7 @@ cat <<EOF
 </div>
 EOF
 
+echo "<a href='https://www.sarkome.de'>Deutsche Sarkom-Stiftung</a>"
 echo "</body></html>"
 
 } >"dest/index.html"
