@@ -54,6 +54,7 @@ OE='&ouml;'
 echo "</head>"
 
 echo "<body>"
+echo "<b>Hinweis</b>: Hier entsteht die Website zu einem unvergesslichen Laufabenteuer...<br>"
 echo "<div class=container>"
 echo "<details>"
 echo "<summary>Impressum &amp; Kontakt</summary>"
