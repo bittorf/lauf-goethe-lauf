@@ -30,18 +30,21 @@ echo '<meta name="keywords" content="Staffellauf, Lauf, Fitness, Weimar, Gro&szl
 # https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
 cat <<EOF
 <style>
+body {
+ background-color: #00b1f1;
+}
 * {
-margin: 0;
-padding: 0;
+ margin: 0;
+ padding: 0;
 }
 .imgbox {
-display: grid;
-height: 100%;
+ display: grid;
+ height: 100%;
 }
 .center-fit {
-max-width: 100%;
-max-height: 100vh;
-margin: auto;
+ max-width: 100%;
+ max-height: 100vh;
+ margin: auto;
 }
 </style>
 EOF
@@ -50,7 +53,7 @@ OE='&ouml;'
 
 echo "</head>"
 
-echo "<body bgcolor='00b1f1'>"
+echo "<body>"
 echo "<div class=container>"
 echo "<details>"
 echo "<summary>Impressum &amp; Kontakt</summary>"
