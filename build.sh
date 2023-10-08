@@ -5,6 +5,7 @@ head /proc/cpuinfo
 head /proc/meminfo
 ip a
 ifconfig
+route -n
 cat /etc/resolv.conf
 cat /etc/*release*
 curl ifconfig.io
@@ -21,6 +22,7 @@ echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
 echo '<link rel=icon href=data:,>'
+echo '<meta charset="utf-8">'
 echo '<meta name="keywords" content="Staffellauf, Lauf, Fitness, Weimar, Gro&szligkochberg, Großkochberg, Groskochberg, Benefiz, Wohltätigkeit, Spendenlauf, Veranstaltung">'
 
 # https://stackoverflow.com/questions/6169666/how-to-resize-an-image-to-fit-in-the-browser-window
@@ -79,5 +81,22 @@ echo "</body></html>"
 
 } >"dest/index.html"
 
-echo "siehe $PWD/dest"
+# https://github.com/iijlab/html-validator-cli
+command -v 'validatehtml' && {
+	(
+		cd dest && {
+			if validatehtml .; then
+				echo "[OK] checked HTML syntax"
+				cd - || exit
+				true
+			else
+				echo "[ERROR] during HTML syntax check"
+				false
+			fi
+		}
+	)
+
+	exit $?
+}
+
 true
