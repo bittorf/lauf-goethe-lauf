@@ -49,7 +49,7 @@ OE='&ouml;'
 
 echo "</head>"
 
-echo "<body>"
+echo "<body bgcolor='00b1f1'>"
 echo "<div class=container>"
 echo "<details>"
 echo "<summary>Impressum &amp; Kontakt</summary>"
