@@ -15,12 +15,14 @@ echo "##################"
 mkdir -p dest
 
 cp -v flyer-crop-32cols-960wide-opti.png dest/1.png
+cp -v goethe.ico dest/1.ico
 
 {
 echo '<!DOCTYPE html>'
 echo "<html lang=de>"
 
 echo "<head><title>Lauf Goethe!</title>"
+echo '<link rel="icon" href="1.ico" type="image/x-icon">'
 echo '<link rel=icon href=data:,>'
 echo '<meta charset="utf-8">'
 echo '<meta name="keywords" content="Staffellauf, Lauf, Fitness, Weimar, Gro&szligkochberg, Großkochberg, Groskochberg, Benefiz, Wohltätigkeit, Spendenlauf, Veranstaltung">'
