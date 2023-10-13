@@ -50,6 +50,8 @@ body {
 EOF
 
 OE='&ouml;'
+AE='&auml;'
+SZ='&szlig;'
 
 echo "</head>"
 
@@ -65,9 +67,9 @@ cat <<EOF
 
 Veranstalter: Dr. Barbara K${OE}llner, David Bauer
 
-Anschrift:    Dr. Barbara K${OE}llner
-              Neuer Herrenweg 10
-              99428 Weimar
+Anschrift:    David Bauer
+              Ernst-Th${AE}lmannstra${SZ}e 12
+              99423 Weimar
 
 Telefon:      0159 / 067 681 55
 
