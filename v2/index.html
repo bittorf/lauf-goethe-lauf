@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang=de>
+
+<!-- TODO:
+ * favicon: orange/blau?
+ * logos alle auf gleiche groesse und evtl. als SVG besorgen
+ * bilder alle auf gleiche groesse
+ * to #top navigation schöner machen
+ * Logo mit Goethe+Schloß einbauen
+ * normalize.css + magick.css ohne externen verweis?
+ * email forwarding freischalten
+ * orange: #fca200
+ * hellblau: #00b1f1
+ -->
+
+<head><title>Lauf Goethe, lauf!</title>
+<link rel="icon" href="1.ico" type="image/x-icon">
+<link rel=icon href=data:,>
+
+<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+<link rel="stylesheet" href="https://unpkg.com/magick.css">
+
+<meta charset="utf-8">
+<meta name="keywords" content="Staffellauf, Lauf, Fitness, Weimar, Großkochberg, Benefiz, Wohltätigkeit, Spendenlauf, Veranstaltung">
+<style>
+
+table {
+  border-spacing: 20px;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #00b1f1;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #fca200;
+  color: black;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topnav" id='home'>
+  <a class="active" href="#home">Lauf Goethe, lauf!</a>
+  <a href="#strecke">Strecke</a>
+  <a href="#anmeldung">Anmeldung</a>
+  <a href="#erloes">Erl&ouml;s</a>
+  <a href="#sponsoren">Sponsoren</a>
+  <a href="#ausschreibung">Ausschreibung</a>
+  <a href="#bilder">Bilder</a>
+  <a href="#impressum">Impressum</a>
+</div> 
+
+<main>
+
+
+<div id='claim'>
+ <blockquote>
+  <p>&bdquo;Lauf Goethe, lauf!&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <footer>Haile&nbsp;Gebrselassie,&nbsp;<cite>2001</cite></footer>
+ </blockquote>
+</div>
+
+
+<div id='intro'>
+ <p>
+  Tauche ein in die poetische Welt von Goethe und erlebe die Natur auf eine ganz neue Art!
+  Begleite uns auf unserem einzigartigen Laufevent entlang des Goetheerlebniswegs von Großkochberg nach Weimar.
+  Inmitten der malerischen Landschaft Thüringens spürst du die Inspiration, die auch den berühmten Dichter zu seinen Meisterwerken anregte.
+ </p>
+
+ <p>
+  Erlebe die Faszination der Natur, während du die historischen Pfade durchläufst, die einst von Goethe selbst betreten wurden.
+  Lass dich von den grünen Wäldern, sanften Hügeln und idyllischen Dörfern verzaubern, während du in die Welt des großen Dichters eintauchst.
+ </p>
+
+ <p>
+  Sei Teil eines unvergesslichen Events, das Laufen, Kultur und Natur auf einzigartige Weise vereint.
+  Erlebe den Geist von Goethe auf Schritt und Tritt und lass dich von seiner Poesie zu Höchstleistungen inspirieren.
+  Sei dabei und werde Teil dieses poetischen Abenteuers!
+ </p>
+</div>
+
+
+<section id='ausschreibung'>
+ <h3>Ausschreibung</h3>
+ <div>
+  <ul>
+   <li><b>Datum:</b> Sonnabend, 24. August 2024</li>
+
+   <li><b>Start:</b> 9:00 Uhr am Schloß &mdash; Goetheplatz 11 &mdash; 07407 Großkochberg</li>
+
+   <li><b>Parkmöglichkeit:</b> Schloßparkplatz</li>
+
+   <li><b>Ziel:</b> Park an der Ilm in Weimar &mdash; Hohle Gasse 7 &mdash; 99425 Weimar</li>
+
+   <li><b>Strecke:</b> 
+     <ul>
+      <li>30 km für Einzelläufer</li>
+      <li>3 &times; 10 km als Staffel (Startnummern werden beim Wechsel übergeben)</li>
+     </ul>
+
+   <li><b>Teilnahmegebühr:</b>
+     <ul>
+      <li>30 km &mdash; 45 €</li>
+      <li>3 &times; 10 km &mdash; 60 €</li>
+      <li>Startnummernband kann für 5 € bei der Startnummernausgabe erworben werden</li>
+     </ul>
+
+   <li><b>Startnummernausgabe:</b> Am Vereinshaus in Großkochberg (am Start)</li>
+
+   <li><b>Bustransfer:</b>
+     <ul>
+      <li>von Weimar nach Großkochberg um 7:30 Uhr ab Falkenburg Weimar (kostenlos)</li>
+      <li>Staffelwechsel sind selbst zu organisieren (kein Bustransfer)</li>
+     </ul>
+
+   <li><b>Gepäckaufbewahrung:</b> Gepäcktransport vom Start zum Ziel erfolgt durch das Organisationsteam</li>
+
+   <li><b>Verpflegung:</b> Streckenverpflegung je 5 km und im Zielbereich</li>
+
+   <li><b>Müll:</b> Becher, Gels und eigener Müll dürfen nicht in die Natur geworfen werden und sind 
+in den aufgestellten Tonnen an den Verpflegungspunkten zu entsorgen. Bei Nichteinhaltung 
+und Verschmutzung der Natur droht eine Disqualifikation.</li>
+
+   <li><b>Leistungen:</b> Bus/Shuttleservice, Gepäckaufbewahrung, Strecken- und Zielverpflegung, Startnummer, Urkunde?,
+            Bruttozeitnahme, Absicherung der Wettkampfstrecke, Streckenbeschriftung und Streckenposten, 
+            Medizinische Versorgung, Finishermedaille, Läuferbörse</li>
+
+   <li><b>Zielschluß:</b> 13:30 Uhr</li>
+
+   <li><b>Siegerehrung:</b> 13:00 Uhr in Weimar</li>
+
+   <li><b>Läuferbörse:</b> für Staffelläufer die noch Partner suchen bitte mit Angabe der ungefähren Laufzeit für 10 km <a href='#impressum'>über Kontakt E-Mail</a> melden</li>
+
+   <!-- als PDF, muss unterschrieb mitgebracht werden: Ort, Datum, Name des Teilnehmers und Unterschrift -->
+
+   <li><b>Haftungsausschluss:</b> Jeder Teilnehner nimmt auf eigene Gefahr an der Veranstaltung teil. Das
+    <a href="media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf">unterschriebene PDF</a>
+    bitte zum Start mitbringen. Der Veranstalter übernimmt keine Haftung für gesundheitliche 
+    Risiken des Teilnehmers im Zusammenhang mit der Teilnahme an der ausgeschriebenen Veranstaltung.
+    Es obliegt dem Teilnehmer, seinen Gesundheitszustand vorher zu überprüfen. 
+    Der Veranstalter übernimmt keine Haftung für Schäden an der Ausrüstung.
+    Eine Teilnahme erfolgt ausschließlich zu Fuß, Fahrräder oder ähnliches sind nicht gestattet.
+    Sie tragen alleinige straf- und zivilrechtliche Verantwortung für alle verursachten Schäden.
+    Der Teilnehmer erklärt sich damit einverstanden, dass die im Zusammenhang mit seiner Teilnahme
+    an der Veranstaltung gemachten Fotos, Filmaufnahmen und Interviews des Teilnehmers online,
+    im Fernsehen und in Printmedien ohne Anspruch auf Vergütung verbreitet und veröffentlich werden können.
+   </li>
+ </ul>
+</div>
+</section>
+
+
+<section id='strecke'>
+ <div>
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Strecke und Streckenverlauf</h3>
+ <ul>
+  <li>1. Streckenabschnitt von Großkochberg nach Schwarza (~10 Kilometer)
+   <figure><a href='https://www.komoot.com/de-de/tour/1436977893?ref=itd&ref=its&share_token=aiMeaXEsm6oUMnS565ta9Tm74xdcnrJjl4PsitvonSpWL6unPO'>
+   <img loading="lazy" src="media/strecke1-komoot-vorschau.png" alt="Abschnitt 1 Streckenverlauf von Großkochberg nach Schwarza (über Neckeroda und Hochdorf)"></a>
+   <figcaption><a href='https://www.komoot.com/de-de/tour/1436977893?ref=itd&ref=its&share_token=aiMeaXEsm6oUMnS565ta9Tm74xdcnrJjl4PsitvonSpWL6unPO'>Komoot.com: von Großkochberg nach Schwarza (über Neckeroda und Hochdorf)</a></figcaption></figure>
+  </li>
+
+  <li>2. Streckenabschnitt von Schwarza nach Buchfart (~10 Kilometer)
+   <figure><a href='https://www.komoot.com/de-de/tour/1436977896?ref=itd&ref=its&share_token=apRPmgnonBATRwiALXERQJFpPF6ZuUCzL7114SI0HKLm1A17cb'>
+   <img loading="lazy" src="media/strecke2-komoot-vorschau.png" alt="Abschnitt 2 Streckenverlauf von Schwarza nach Buchfart (über Saalborn)"></a>
+   <figcaption><a href='https://www.komoot.com/de-de/tour/1436977896?ref=itd&ref=its&share_token=apRPmgnonBATRwiALXERQJFpPF6ZuUCzL7114SI0HKLm1A17cb'>Komoot.com: von Schwarza nach Buchfart (über Saalborn)</a></figcaption></figure>
+  </li>
+
+  <li>3. Streckenabschnitt von Buchfart nach Oberweimar (~10 Kilometer)
+   <figure><a href='https://www.komoot.com/de-de/tour/1436977898?ref=itd&ref=its&share_token=ahsJlro5O4jqj6ldAPq08EGvuB0mUj89QYbFuEkxHVNEPvXHmJ'>
+   <img loading="lazy" src="media/strecke3-komoot-vorschau.png" alt="Abschnitt 3 Streckenverlauf von Buchfart nach Oberweimar (über Vollersroda)"></a>
+   <figcaption><a href='https://www.komoot.com/de-de/tour/1436977898?ref=itd&ref=its&share_token=ahsJlro5O4jqj6ldAPq08EGvuB0mUj89QYbFuEkxHVNEPvXHmJ'>Komoot.com: von Buchfart nach Oberweimar (über Vollersroda)</a></figcaption></figure>
+  </li>
+ </ul>
+
+ <h4>Wechselpunkte der Staffel</h4>
+ <ul>
+  <li><b>Erster Wechsel:</b> Erlebnistation 8a &mdash; <a href='https://www.goethe-erlebnisweg.de/fernrohr'>Goethe-Erlebnisweg ("Fernrohr")</a></li>
+  <li><b>Zweiter Wechsel:</b> Buchfahrt am Parkplatz vor der Brücke</li>
+ </ul>
+</div>
+</section>
+
+
+<section id='anmeldung'>
+ <div>
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Anmeldung</h3>
+ Der Link zur Anmeldung (inklusive Bezahlmöglichkeit) folgt zeitnah.
+ </div>
+</section>
+
+
+<section id='erloes'>
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Der Reinerlös geht an...</h3>
+
+ <figure><a href='https://www.sarkome.de'>
+ <img loading="lazy" src="media/logo-deutsche-sarkom-stiftung.jpg" alt="Logo Deutsche Sarkom Stiftung"></a>
+ <figcaption><a href='https://www.sarkome.de'>Deutsche Sarkom Stiftung</a></figcaption></figure>
+</section>
+
+
+<section id='sponsoren'>
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Sponsoren und Unterstützer</h3>
+ <p>
+ <h4>Wir danken unseren Partnern, Förderern und Sponsoren:</h4>
+
+<figure><a href='https://wacker-weimar.de'>
+<img loading="lazy" src="media/logo-sv-wacker-weimar-1980.jpg" alt="Logo SV Wacker 1980 Weimar e.V."></a>
+<figcaption><a href='https://wacker-weimar.de'>SV Wacker 1980 Weimar e.V.</a></figcaption></figure>
+
+<figure><a href='https://www.sparkasse-mittelthueringen.de'>
+<img loading="lazy" src="media/Logo_SparkasseMittelthueringen_rot_rgb-10percent.jpg" alt="Logo Sparkasse Mittelthüringen"></a>
+<figcaption><a href='https://www.sparkasse-mittelthueringen.de'>Sparkasse Mittelthüringen</a></figcaption></figure>
+
+<figure><a href='https://stadt.weimar.de/de/zustaendige-stelle/organisationseinheit/333/sportverwaltung.html'>
+<img loading="lazy" src="media/logo-sportverwaltung-stadt-weimar.png" alt="Logo Sportverwaltung Stadt Weimar"></a>
+<figcaption><a href='https://stadt.weimar.de/de/zustaendige-stelle/organisationseinheit/333/sportverwaltung.html'>Sportverwaltung der Stadt Weimar</a></figcaption></figure>
+
+<figure><a href='https://www.ssb-weimar.de'>
+<img loading="lazy" src="media/logo-stadtsportbund-weimar.png" alt="Logo Stadtsportbund Weimar e.V."></a>
+<figcaption><a href='https://www.ssb-weimar.de'>Stadtsportbund Weimar e.V.</a></figcaption></figure>
+
+<figure><a href='https://www.hsv-weimar.de'>
+<img loading="lazy" src="media/logo-hsv-weimar.jpg" alt="Logo HSV Weimar"></a>
+<figcaption><a href='https://www.hsv-weimar.de'>HSV Weimar e.V.</a></figcaption></figure>
+
+<figure><a href='https://www.vfb-oberweimar.de'>
+<img loading="lazy" src="media/logo-vfb-oberweimar.png" alt="Logo VfB Oberweimar e.V."></a>
+<figcaption><a href='https://www.vfb-oberweimar.de'>VfB Oberweimar e.V.</a></figcaption></figure>
+
+<figure><a href='https://www.cfc-weimar.de'>
+<img loading="lazy" src="media/logo-cfc-weimar.png" alt="Logo 1. Cheer- und Fitnessclub Weimar e.V."></a>
+<figcaption><a href='https://www.cfc-weimar.de'>1. Cheer- und Fitnessclub Weimar e.V.</a></figcaption></figure>
+
+<figure><a href='https://sc-impuls.de'>
+<img loading="lazy" src="media/logo-sc-impuls-erfurt.png" alt="Logo SC Impuls Erfurt e.V."></a>
+<figcaption><a href='https://sc-impuls.de'>SC Impuls Erfurt e.V.</a></figcaption></figure>
+
+<figure><a href='https://www.weimarer-land.travel'>
+<img loading="lazy" src="media/logo-weimarerland_hauptlogo-farbig.webp" alt="Logo Weimarer Land Tourismus e.V." title="Weimarer Land Tourismus e.V."></a>
+<figcaption><a href='https://www.weimarer-land.travel'>Weimarer Land Tourismus e.V.</a></figcaption><!-- Tourismusverband Weimarer Land ??? --></figure>
+
+<figure><a href='https://www.sarkome.de'>
+<img loading="lazy" src="media/logo-deutsche-sarkom-stiftung.jpg" alt="Logo Deutsche Sarkom Stiftung"></a>
+<figcaption><a href='https://www.sarkome.de'>Deutsche Sarkom Stiftung</a></figcaption></figure>
+
+<figure><a href='https://druckerei-kessler.de'>
+<img loading="lazy" src="media/logo-druckerei-kessler-signet_jubi-rot.jpg" alt="Logo Buch- und Kunstdruckerei Keßler GmbH"></a>
+<figcaption><a href='https://druckerei-kessler.de'>Buch- und Kunstdruckerei Keßler GmbH</a></figcaption></figure>
+
+<figure><a href='https://www.ibb-weimar.de'>
+<img loading="lazy" src="media/logo-ibb-weimar.png" alt="Logo Ingenieurbüro Bauwesen IBB Weimar GmbH"></a>
+<figcaption><a href='https://www.ibb-weimar.de'>Ingenieurbüro Bauwesen IBB Weimar GmbH</a></figcaption></figure>
+
+<figure><a href='https://www.mobile-polsterei.de'>
+<img loading="lazy" src="media/logo-mobile-posterei-weimar.jpg" alt="Logo Raumausstatter und Mobile Polsterei Weimar"></a>
+<figcaption><a href='https://www.mobile-polsterei.de'>Raumausstatter &amp; Mobile Polsterei Weimar</a></figcaption></figure>
+
+<figure><a href='https://www.hochheim-weimar.de'>
+<img loading="lazy" src="media/logo-hochheim.jpg" alt="Logo Sanitätshaus Hochheim Orthopädie-Technik GmbH"></a>
+<figcaption><a href='https://www.hochheim-weimar.de'>Sanitätshaus Hochheim Orthopädie-Technik GmbH</a></figcaption></figure>
+
+<figure><a href='https://www.klassik-stiftung.de'>
+<img loading="lazy" src="media/Klassik_Stiftung_Weimar_Logo_SW.svg" alt="Logo Klassik Stiftung Weimar"></a>
+<figcaption><a href='https://www.klassik-stiftung.de'>Klassik Stiftung Weimar</a></figcaption></figure>
+
+<figure><a href='https://www.schuchort-reisen.de'>
+<img loading="lazy" src="media/logo-busunternehmen-schuchort.svg" alt="Logo Busunternehmen Schuchort"></a>
+<figcaption><a href='https://www.schuchort-reisen.de'>Busunternehmen Schuchort</a></figcaption></figure>
+
+<figure><a href='https://www.komoot.com'>
+<img loading="lazy" src="media/logo_komoot_green_RGB_v2-1.svg" alt="Logo Komoot.com"></a>
+<figcaption><a href='https://www.komoot.com'>Komoot Tourenplaner</a></figcaption></figure>
+
+<p>
+</section>
+
+
+<section id="bilder">
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Bilder und Eindrücke</h3>
+
+<figure><a href='https://www.klassik-stiftung.de/schloss-und-park-kochberg/'>
+<img loading="lazy" src="media/foto-schloss-grosskochberg.jpeg" alt="Läufer am Schloß Kochberg" 
+ title="Start am Schloß Kochberg - wir lassen das Liebhabertheater hinter uns"></a>
+<figcaption><a href='https://www.klassik-stiftung.de/schloss-und-park-kochberg/'>Start am Schloß Kochberg</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de/himmelsspiegel'>
+<img loading="lazy" src="media/foto-spiegelwand.jpeg" alt="Goethe Erlebnisweg: Station Himmelsspiegel" 
+ title='"Nach einem anstrengenden Aufstieg erwartet man hier einen Blick über das Land. Doch diese Erwartung wird überraschend verwandelt, wenn man selbst Teil des Panoramas wird." (von https://www.goethe-erlebnisweg.de)'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de/himmelsspiegel'>Station Himmelsspiegel</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de/fernrohr'>
+<img loading="lazy" src="media/foto-fernrohr.jpeg" alt="Goethe Erlebnisweg: Station Fernrohr" 
+ title='"Wie weit ist es bis zur anderen Talseite und wie lange braucht man für die Strecke? Das Fernrohr hilft beim Schätzen und lädt spielerisch ein, sich mit Zeit und Weg auseinanderzusetzen. Gleichzeitig bekommt man ein Gefühl dafür, welche Distanz Goethe in welcher Zeit zurückgelegt hat." (von https://www.goethe-erlebnisweg.de)'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de/fernrohr'>Station Fernrohr</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de/herzschaukel'>
+<img loading="lazy" src="media/foto-herzschaukel.jpeg" alt="Goethe Erlebnisweg: Station Herzschaukel"
+ title='"Auf der herzförmigen Partnerschaukel schwingt man im Takt. Zusammen als Paar oder auch allein kann man hier den Ausblick auf die mit Bäumen gesäumte Landschaft genießen und sich eine Erinnerung mit der Selfie-Station schaffen." (von https://www.goethe-erlebnisweg.de)'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de/herzschaukel'>Station Herzschaukel</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de/waldbadezimmer'>
+<img loading="lazy" src="media/foto-waldbadezimmer.jpeg" alt="Goethe Erlebnisweg: Station Waldbadezimmer"
+ title='"Ein Ort, um zur Ruhe zu kommen und Stress abzubauen. Diese Station ermöglicht es, die positiven und gesundheitlichen Erfahrungen des Waldbadens zu erleben. Mehrere Angebote laden ein, die Sinne zu öffnen und ins Spüren zu kommen." (von https://www.goethe-erlebnisweg.de)'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de/waldbadezimmer'>Station Waldbadezimmer</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de/herzsprung'>
+<img loading="lazy" src="media/foto-herzsprung.jpeg" alt="Goethe Erlebnisweg: Station Herzsprung"
+ title='"Gemeinsame Erfahrungen stärken das Wir-Gefühl, erzeugen schöne Erinnerungen und ermöglichen es, sich immer wieder neu zu entdecken. Beim (gemeinsamen) Sprung auf dem Trampolin macht vielleicht auch das Herz einen Sprung." (von https://www.goethe-erlebnisweg.de)'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de/herzsprung'>Station Herzsprung</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de'>
+<img loading="lazy" src="media/foto-lichtwald.jpeg" alt="Goethe Erlebnisweg: Die Sonne durchflutet den Wald"
+ title='foo bar baz'></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de'>Die Sonne durchflutet den Wald</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de'>
+<img loading="lazy" src="media/foto-wald-go-and-run.jpeg" alt="Zwei starke Waden mit der Aufschrift 'go' und 'run'" 
+ title="Zwei starke Waden mit der Aufschrift 'go' und 'run'"></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de'>Zwei starke Waden mit der Aufschrift 'go' und 'run'</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de'>
+<img loading="lazy" src="media/foto-wald-mit-aussicht.jpeg" alt="Unendliche Weiten" 
+ title="Aussicht soweit die Sinne reichen"></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de'>Aussicht soweit die Sinne reichen</a></figcaption></figure>
+
+<figure><a href='https://www.goethe-erlebnisweg.de'>
+<img loading="lazy" src="media/foto-holzstammlager.jpeg" alt="Geschickte Schritte überqueren ein Baumstammlager" 
+ title="Jede Menge Holz vor der Hütte"></a>
+<figcaption><a href='https://www.goethe-erlebnisweg.de'>Geschickte Schritte überqueren ein Baumstammlager</a></figcaption></figure>
+
+</section>
+
+
+<section id="impressum">
+ <button onclick="location.href='#home'" type="button">Home</button>
+ <h3>Kontakt und Impressum</h3>
+<table>
+
+ <tr>
+  <td>Veranstalter:</td>
+  <td>SV Wacker 1980 Weimar e.V.</td>
+ </tr>
+
+ <tr>
+  <td>Anschrift:</td>
+  <td>Ins Umpferstedter Holz 12a<br>99425 Weimar</td>
+ </tr>
+
+ <tr>
+  <td>Inhaltlich&nbsp;verantwortlich:</td>
+  <td>Bastian Bittorf</td>
+ </tr>
+
+ <tr>
+  <td>Kontakt:</td>
+  <td><a href="tel:+49-159-067-681-55">0159 / 067 681 55</a><br>
+      <a href='info@lauf-goethe-lauf.de'>info@lauf-goethe-lauf.de</a>
+  </td>
+ </tr>
+
+ <tr>
+  <td>Organisation:</td>
+  <td>Dr. Barbara K&ouml;llner<br>David Bauer<br>Dr. Hendrik Schr&ouml;ter<br></td>
+ </tr>
+
+ <tr>
+  <td>Haftungshinweis:</td>
+  <td>
+   Trotz sorgfälter inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.
+   Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+  </td>
+ </tr>
+
+ <tr>
+  <td>&nbsp;</td>
+  <td>
+   <small>&hearts;&nbsp;<a href='https://github.com/wintermute-cell/magick.css'>magick.css</a>&nbsp;&amp;&nbsp;<a href='https://github.com/necolas/normalize.css'>normalize.css</a></small>
+  </td>
+ </tr>
+</table>
+</section>
+
+
+</main></body></html>
