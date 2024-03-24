@@ -1,10 +1,10 @@
 #!/bin/sh
-#
-# v2
 
 mkdir -p dest
 cp -R v2/ dest
+find dest -type f
 
+echo
 echo "##################"
 head /proc/cpuinfo
 head /proc/meminfo
