@@ -1,7 +1,7 @@
 #!/bin/sh
 
-mkdir -p dest
-cp -R v2/ dest
+test -d dest && rm -fR dest
+cp -R v2/ dest/
 find dest -type f
 
 echo
