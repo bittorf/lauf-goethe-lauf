@@ -3,7 +3,7 @@
 # v2
 
 mkdir -p dest
-cp -R v2 dest
+cp -R v2/ dest
 exit 0
 
 
