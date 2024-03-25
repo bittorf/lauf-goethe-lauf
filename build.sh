@@ -1,6 +1,8 @@
 #!/bin/sh
 
-apt-get install imagemagick
+#apt-get install imagemagick
+#https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
+asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global imagemagick 7.1.1-29
 
 test -d dest && rm -fR dest
 cp -R v2/ dest/
