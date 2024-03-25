@@ -16,7 +16,12 @@ cp -R v2/ dest/
     cat "magick-no-comments-no-empty-lines.css"
     echo
     cat "private.css"
-  } >TEMP && rm -f *.css && mv TEMP all.css
+  } >TEMP1 && {
+	mv normalize-no-comments-no-empty-lines.css TEMP2
+	rm -f *.css
+	mv TEMP2 normalize.css
+	mv TEMP1 magick.css
+  }
 )
 
 ls -l dest/
