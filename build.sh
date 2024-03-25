@@ -12,10 +12,13 @@ test -d dest && rm -fR dest
 cp -R v2/ dest/
 
 (
-  F1=normalize.min.css
-  F2=magick.min.css
-  F3=private.css
-  cd dest && cat $F1 $F2 $F3 >all.css && rm -f $F1 $F2 $F3
+  cd dest && {
+    cat "normalize-no-comments-no-empty-lines.css"
+    echo
+    cat "magick-no-comments-no-empty-lines.css"
+    echo
+    cat "private.css"
+  } >TEMP && rm -f *.css && mv TEMP all.css
 )
 
 ls -l dest/
