@@ -1,6 +1,5 @@
 #!/bin/sh
 
-#apt-get install imagemagick
 #https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
 asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global imagemagick 7.1.1-29
 
@@ -14,7 +13,18 @@ find dest -type f -name 'foto-*' | while read -r LINE; do {
 } done
 
 for SIZE2 in $(du -sb dest); do break; done
-echo "[OK] $(( SIZE2 - SIZE1 )) bytes gespart, nun: $SIZE2 bytes"
+echo "[OK] $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
+
+find dest -type f -name 'logo*' | while read -r LINE; do {
+	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
+} done
+
+for SIZE3 in $(du -sb dest); do break; done
+echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
+
+echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
+
+
 
 echo
 echo "##################"
