@@ -6,6 +6,16 @@ asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global 
 
 test -d dest && rm -fR dest
 cp -R v2/ dest/
+
+(
+  F1=normalize.min.css
+  F2=magick.min.css
+  F3=private.css
+  cd dest && cat $F1 $F2 $F3 >all.css && rm -f $F1 $F2 $F3
+)
+
+ls -l dest/
+
 for SIZE1 in $(du -sb dest); do break; done
 echo "[OK] alles sind $SIZE1 bytes"
 
