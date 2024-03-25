@@ -13,8 +13,6 @@ cp -R v2/ dest/
 
 (
   cd dest && {
-    cat "normalize-no-comments-no-empty-lines.css"
-    echo
     cat "magick-no-comments-no-empty-lines.css"
     echo
     cat "private.css"
