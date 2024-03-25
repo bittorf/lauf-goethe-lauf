@@ -2,10 +2,11 @@
 
 # https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
 # https://github.com/asdf-vm/asdf-plugins
-asdf plugin add imagemagick
-command -v 'convert' && convert --version
-asdf plugin update --all
-command -v 'convert' && convert --version
+asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global imagemagick 7.1.1-29
+#asdf plugin add imagemagick
+#command -v 'convert' && convert --version
+#asdf plugin update --all
+#command -v 'convert' && convert --version
 
 test -d dest && rm -fR dest
 cp -R v2/ dest/
