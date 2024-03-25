@@ -2,7 +2,15 @@
 
 test -d dest && rm -fR dest
 cp -R v2/ dest/
-find dest -type f
+for SIZE1 in $(du -sb dest); do break; done
+echo "[OK] alles sind $SIZE1 bytes"
+
+find dest -type f -name 'foto-*' | while read -r LINE; do {
+	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE"
+} done
+
+for SIZE2 in $(du -sb dest); do break; done
+echo "[OK] $(( SIZE2 - SIZE1 )) bytes gespart, nun: $SIZE2 bytes"
 
 echo
 echo "##################"
