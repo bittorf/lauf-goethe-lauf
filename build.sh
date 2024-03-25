@@ -1,5 +1,7 @@
 #!/bin/sh
 
+apt-get install imagemagick
+
 test -d dest && rm -fR dest
 cp -R v2/ dest/
 for SIZE1 in $(du -sb dest); do break; done
@@ -14,15 +16,20 @@ echo "[OK] $(( SIZE2 - SIZE1 )) bytes gespart, nun: $SIZE2 bytes"
 
 echo
 echo "##################"
+echo "# /proc/cpuinfo"
 head /proc/cpuinfo
+echo
+echo "# /proc/meminfo"
 head /proc/meminfo
-ip a
-ifconfig
-route -n
+echo
+command -v 'ip' && ip a
+command -v 'ifconfig' && ifconfig
+command -v 'route' && route -n
+cat /proc/net/route
 cat /etc/resolv.conf
 cat /etc/*release*
-curl ifconfig.io
-id
+echo "public IP: $( curl -s ifconfig.io )"
+echo "id: $( id )"
 echo "##################"
 
 # https://github.com/iijlab/html-validator-cli
