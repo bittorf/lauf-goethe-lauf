@@ -2,7 +2,18 @@
 
 # https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
 # https://github.com/asdf-vm/asdf-plugins
+
+if command -v 'asdf'; then
+	asdf plugin add imagemagick && asdf install imagemagick
+else
+	:
+fi
+
+command -v 'convert' && convert --version
+
+command -v 'convert' || {
 asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global imagemagick 7.1.1-29
+}
 #asdf plugin add imagemagick
 #command -v 'convert' && convert --version
 #asdf plugin update --all
@@ -18,7 +29,7 @@ cp -R v2/ dest/
     cat "private.css"
   } >TEMP1 && {
 	mv normalize-no-comments-no-empty-lines.css TEMP2
-	rm -f *.css
+	rm -f ./*.css
 	mv TEMP2 normalize.css
 	mv TEMP1 magick.css
   }
