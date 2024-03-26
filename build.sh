@@ -12,15 +12,11 @@ else
 	:
 fi
 
-command -v 'convert' && convert --version
-
-command -v 'convert' || {
-asdf plugin add imagemagick && asdf install imagemagick 7.1.1-29 && asdf global imagemagick 7.1.1-29
-}
-#asdf plugin add imagemagick
-#command -v 'convert' && convert --version
-#asdf plugin update --all
-#command -v 'convert' && convert --version
+if command -v 'convert'; then
+	convert --version
+else
+	exit 1
+fi
 
 test -d dest && rm -fR dest
 cp -R v2/ dest/
@@ -38,8 +34,10 @@ cp -R v2/ dest/
   }
 )
 
+echo "# ls dest/"
 ls -l dest/
 
+echo
 for SIZE1 in $(du -sb dest); do break; done
 echo "[OK] alles sind $SIZE1 bytes"
 
@@ -47,6 +45,7 @@ find dest -type f -name 'foto-*' | while read -r LINE; do {
 	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE"
 } done
 
+echo
 for SIZE2 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
 
@@ -54,28 +53,44 @@ find dest -type f -name 'logo*' | while read -r LINE; do {
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
 } done
 
+echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 
-
 echo
 echo "##################"
+
 echo "# /proc/cpuinfo"
 head /proc/cpuinfo
 echo
+
 echo "# /proc/meminfo"
 head /proc/meminfo
 echo
+
 command -v 'ip' && ip a
 command -v 'ifconfig' && ifconfig
 command -v 'route' && route -n
+
+echo
+echo "# /proc/net/route"
 cat /proc/net/route
+
+echo
+echo "# /etc/resolv.conf"
 cat /etc/resolv.conf
+
+echo
+echo "# /etc/*release*"
 cat /etc/*release*
+
+echo
 echo "public IP: $( curl -s ifconfig.io )"
+
+echo
 echo "id: $( id )"
 echo "##################"
 
