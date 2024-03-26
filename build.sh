@@ -5,7 +5,9 @@
 # https://github.com/asdf-vm/asdf-plugins
 
 if command -v 'asdf'; then
-	asdf plugin add imagemagick && asdf install imagemagick latest
+	asdf plugin add imagemagick
+	asdf install imagemagick latest
+	asdf global imagemagick latest
 else
 	:
 fi
