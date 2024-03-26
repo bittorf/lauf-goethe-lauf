@@ -1,10 +1,11 @@
 #!/bin/sh
 
 # https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
+# https://asdf-vm.com/
 # https://github.com/asdf-vm/asdf-plugins
 
 if command -v 'asdf'; then
-	asdf plugin add imagemagick && asdf install imagemagick
+	asdf plugin add imagemagick && asdf install imagemagick latest
 else
 	:
 fi
