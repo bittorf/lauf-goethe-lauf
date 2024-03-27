@@ -59,20 +59,18 @@ echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
+iso8601fromfile() { date +"%Y-%m-%dT%H:%M:%S%:z" -r "$1"; }
+
 # insert real change date into sitemap:
 #
 PATTERN='2024-03-25T16:33:40+00:00-A'
-FILE=dest/v2/index.html
-NEW="$( date +"%Y-%m-%dT%H:%M:%S%z" -r "$FILE" )"
-echo $NEW
-sed -i "s/$PATTERN/$NEW" dest/v2/sitemap.xml
+NEW="$( iso8601fromfile 'dest/index.html' )"
+sed -i "s/$PATTERN/$NEW" dest/sitemap.xml
 
 PATTERN='2024-03-25T16:33:40+00:00-B'
-FILE=dest/v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf
-NEW="$( date +"%Y-%m-%dT%H:%M:%S%z" -r "$FILE" )"
-echo $NEW
-sed -i "s/$PATTERN/$NEW" dest/v2/sitemap.xml
-cat dest/v2/sitemap.xml
+NEW="$( iso8601fromfile 'dest/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
+sed -i "s/$PATTERN/$NEW" dest/sitemap.xml
+cat dest/sitemap.xml
 
 echo
 echo "##################"
