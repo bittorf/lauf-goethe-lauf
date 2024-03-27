@@ -55,6 +55,17 @@ find dest -type f -name 'logo*' | while read -r LINE; do {
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
 } done
 
+# https://stackoverflow.com/questions/39056537/why-don-t-svg-images-scale-using-the-css-width-property
+# scale to 250px - see CSS-class .image-partner
+find dest -type f -iname '*logo*.svg' | while read LINE; do {
+	ls -l "$LINE"
+	BASE="$( basename -- "$LINE" )"
+	convert "$LINE" -resize 250 -quality 60 "$LINE.jpg"
+	ls -l "$LINE.jpg"
+	file "$LINE.jpg"
+	sed -i "s/$BASE/$BASE.jpg/g" dest/index.html
+} done
+
 echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
