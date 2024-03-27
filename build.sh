@@ -76,6 +76,9 @@ UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilneh
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
+# debug dates:
+git log -7
+
 echo
 echo "##################"
 
