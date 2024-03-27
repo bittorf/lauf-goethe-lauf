@@ -42,6 +42,7 @@ ls -l dest/
 echo
 for SIZE1 in $(du -sb dest); do break; done
 echo "[OK] alles sind $SIZE1 bytes"
+echo "[OK] resizing fotos to 700px"
 
 find dest -type f -name 'foto-*' | while read -r LINE; do {
 	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE"
@@ -49,60 +50,29 @@ find dest -type f -name 'foto-*' | while read -r LINE; do {
 
 echo
 for SIZE2 in $(du -sb dest); do break; done
-echo "[OK] $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
+echo "[OK] resizing fotos to 700px: $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
 
+echo "[OK] resizing logos to 250px:"	# FIXME! to jpg
 find dest -type f -name 'logo*' | while read -r LINE; do {
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
 } done
 
-echo "[OK] converting SVG to bitmap"
-# https://stackoverflow.com/questions/39056537/why-don-t-svg-images-scale-using-the-css-width-property
-# scale to 250px - see CSS-class .image-partner
-find dest -type f -iname '*logo*.svg' | while read -r LINE; do {
-	echo
-	ls -l "$LINE"
-	BASE="$( basename -- "$LINE" )"
-echo   "convert '$LINE' -resize 250 -quality 60 '$LINE.jpg'"
-	convert "$LINE" -resize 250 -quality 60 "$LINE.jpg" || {
-		continue
-	}
-	echo "[OK] success: $LINE.jpg"
-	rm -f "$LINE"
-	ls -l "$LINE.jpg"
-	file "$LINE.jpg"
-	sed -i "s/$BASE/$BASE.jpg/g" dest/index.html
-	grep "$BASE.jpg" dest/index.html
-	echo "end-of-loop"
-} done
-echo "[OK] ready svg-convert"
-
 echo
 for SIZE3 in $(du -sb dest); do break; done
-echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
+echo "[OK] resizing logos to 250px: $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 filesize_bytes() { wc -c <"$1"; }
 
 echo "[OK] stripping metadata"
 for SIZE4 in $(du -sb dest); do break; done
 #
-# strip all metadata:
 find dest/media/ -type f | while read -r LINE; do {
-	ls -l "$LINE"
 	cp "$LINE" original
 	S1="$( filesize_bytes "$LINE" )" 
-
 	convert "$LINE" -strip "$LINE"
-
 	S2="$( filesize_bytes "$LINE" )"
-	ls -l "$LINE"
 
-	test "$S2" -gt "$S1" && {
-		echo "groesser?! revert:"
-		cp original "$LINE"
-		ls -l "$LINE"
-	}
-
-	echo
+	test "$S2" -gt "$S1" && cp original "$LINE"
 } done
 rm -f original
 #
@@ -127,9 +97,8 @@ UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilneh
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
-# debug dates: - seems the checkout is done using --depth=1 so we have no history
-echo "gitlog:"
-ls -la
+# debug dates: - seems the checkout is done using --depth=1 so we have no history - FIXME!
+echo "# git log -7"
 git log -7
 
 echo
