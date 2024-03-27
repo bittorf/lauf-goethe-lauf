@@ -19,7 +19,7 @@ else
 fi
 
 test -d dest && rm -fR dest
-cp -R v2/ dest/
+cp -pR v2/ dest/
 
 (
   cd dest && {
