@@ -65,11 +65,11 @@ iso8601fromfile() { date +"%Y-%m-%dT%H:%M:%S%:z" -r "$1"; }
 #
 PATTERN='2024-03-25T16:33:40+00:00-A'
 NEW="$( iso8601fromfile 'dest/index.html' )"
-sed -i "s/$PATTERN/$NEW" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
 PATTERN='2024-03-25T16:33:40+00:00-B'
 NEW="$( iso8601fromfile 'dest/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
-sed -i "s/$PATTERN/$NEW" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 cat dest/sitemap.xml
 
 echo
