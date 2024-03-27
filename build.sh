@@ -64,13 +64,15 @@ iso8601fromfile() { date +"%Y-%m-%dT%H:%M:%S%:z" -r "$1"; }
 # insert real change date into sitemap:
 #
 PATTERN='2024-03-25T16:33:40+00:00-A'
-NEW="$( iso8601fromfile 'dest/index.html' )"
+NEW="$( iso8601fromfile 'v2/index.html' )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
 PATTERN='2024-03-25T16:33:40+00:00-B'
-NEW="$( iso8601fromfile 'dest/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
+NEW="$( iso8601fromfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 cat dest/sitemap.xml
+ls -l v2
+ls -l dest
 
 echo
 echo "##################"
