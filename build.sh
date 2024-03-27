@@ -55,9 +55,11 @@ find dest -type f -name 'logo*' | while read -r LINE; do {
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
 } done
 
+echo "[OK] converting SVG to bitmap"
 # https://stackoverflow.com/questions/39056537/why-don-t-svg-images-scale-using-the-css-width-property
 # scale to 250px - see CSS-class .image-partner
 find dest -type f -iname '*logo*.svg' | while read -r LINE; do {
+	echo
 	ls -l "$LINE"
 	BASE="$( basename -- "$LINE" )"
 echo   "convert '$LINE' -resize 250 -quality 60 '$LINE.jpg'"
@@ -72,12 +74,13 @@ echo   "convert '$LINE' -resize 250 -quality 60 '$LINE.jpg'"
 	grep "$BASE.jpg" dest/index.html
 	echo "end-of-loop"
 } done
-echo "ready svg-convert"
+echo "[OK] ready svg-convert"
 
 echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
+filesize_bytes() { wc -c <"$1"; }
 
 echo "[OK] stripping metadata"
 for SIZE4 in $(du -sb dest); do break; done
@@ -85,10 +88,23 @@ for SIZE4 in $(du -sb dest); do break; done
 # strip all metadata:
 find dest/media/ -type f | while read -r LINE; do {
 	ls -l "$LINE"
+	cp "$LINE" original
+	S1="$( filesize_bytes "$LINE" )" 
+
 	convert "$LINE" -strip "$LINE"
+
+	S2="$( filesize_bytes "$LINE" )"
 	ls -l "$LINE"
+
+	test "$S2" -gt "$S1" && {
+		echo "groesser?! revert:"
+		cp original "$LINE"
+		ls -l "$LINE"
+	}
+
 	echo
 } done
+rm -f original
 #
 for SIZE5 in $(du -sb dest); do break; done
 echo "[OK] metadata removed: $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
