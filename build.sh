@@ -39,6 +39,8 @@ cp -pR v2/ dest/
 echo "# ls dest/"
 ls -l dest/
 
+filesize_bytes() { wc -c <"$1"; }
+
 echo
 for SIZE1 in $(du -sb dest); do break; done
 echo "[OK] alles sind $SIZE1 bytes"
@@ -54,21 +56,29 @@ echo "[OK] resizing fotos to 700px: $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SI
 
 echo "[OK] resizing logos to 250px:"	# FIXME! to jpg
 find dest -type f -name 'logo*' | while read -r LINE; do {
+	width=888
+	# shellcheck disable=SC2046
+	eval $( identify -format 'width=%w;height=%h;ok=true;\n' "$LINE" 2>/dev/null )
+
+	test "$width" -le 250 && continue
+	S1="$( filesize_bytes "$LINE" )"
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
+	S2="$( filesize_bytes "$LINE" )"
+
+	test "$S2" -gt "$S1" && echo "[HINT] file now bigger: $S2 > $S1 bytes - $LINE"
 } done
 
 echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] resizing logos to 250px: $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
-filesize_bytes() { wc -c <"$1"; }
 
 echo "[OK] stripping metadata"
 for SIZE4 in $(du -sb dest); do break; done
 #
 find dest/media/ -type f | while read -r LINE; do {
 	cp "$LINE" original
-	S1="$( filesize_bytes "$LINE" )" 
+	S1="$( filesize_bytes "$LINE" )"
 	convert "$LINE" -strip "$LINE"
 	S2="$( filesize_bytes "$LINE" )"
 
