@@ -60,7 +60,7 @@ find dest -type f -name 'logo*' | while read -r LINE; do {
 find dest -type f -iname '*logo*.svg' | while read LINE; do {
 	ls -l "$LINE"
 	BASE="$( basename -- "$LINE" )"
-	convert "$LINE" -resize 250 -quality 60 "$LINE.jpg"
+	convert "$LINE" -resize 250 -quality 60 "$LINE.jpg" || continue
 	ls -l "$LINE.jpg"
 	file "$LINE.jpg"
 	sed -i "s/$BASE/$BASE.jpg/g" dest/index.html
