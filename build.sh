@@ -74,7 +74,7 @@ echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 for SIZE4 in $(du -sb dest); do break; done
 #
 # strip all metadata:
-for dest/media/ -type f | while read -r LINE; do {
+find dest/media/ -type f | while read -r LINE; do {
 	convert "$LINE" -strip "$LINE"
 } done
 #
