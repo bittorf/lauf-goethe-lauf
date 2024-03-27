@@ -54,7 +54,7 @@ echo "[OK] $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
 find dest -type f -name 'logo*' | while read -r LINE; do {
 	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
 } done
-
+set -x
 # https://stackoverflow.com/questions/39056537/why-don-t-svg-images-scale-using-the-css-width-property
 # scale to 250px - see CSS-class .image-partner
 find dest -type f -iname '*logo*.svg' | while read -r LINE; do {
@@ -65,12 +65,14 @@ find dest -type f -iname '*logo*.svg' | while read -r LINE; do {
 	file "$LINE.jpg"
 	sed -i "s/$BASE/$BASE.jpg/g" dest/index.html
 } done
+set +x
 
 echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 
+echo "[OK] stripping metadata"
 for SIZE4 in $(du -sb dest); do break; done
 #
 # strip all metadata:
@@ -79,7 +81,7 @@ find dest/media/ -type f | while read -r LINE; do {
 } done
 #
 for SIZE5 in $(du -sb dest); do break; done
-echo "[OK] $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
+echo "[OK] metadata removed: $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
 
 echo
 echo "[OK] insgesamt: $(( SIZE1 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
@@ -100,6 +102,8 @@ NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
 # debug dates:
+echo "gitlog:"
+ls -la
 git log -7
 
 echo
