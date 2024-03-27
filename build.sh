@@ -57,7 +57,7 @@ find dest -type f -name 'logo*' | while read -r LINE; do {
 
 # https://stackoverflow.com/questions/39056537/why-don-t-svg-images-scale-using-the-css-width-property
 # scale to 250px - see CSS-class .image-partner
-find dest -type f -iname '*logo*.svg' | while read LINE; do {
+find dest -type f -iname '*logo*.svg' | while read -r LINE; do {
 	ls -l "$LINE"
 	BASE="$( basename -- "$LINE" )"
 	convert "$LINE" -resize 250 -quality 60 "$LINE.jpg" || continue
@@ -70,7 +70,19 @@ echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
-echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
+
+for SIZE4 in $(du -sb dest); do break; done
+#
+# strip all metadata:
+for dest/media/ -type f | while read -r LINE; do {
+	convert "$LINE" -strip "$LINE"
+} done
+#
+for SIZE5 in $(du -sb dest); do break; done
+echo "[OK] $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
+
+echo
+echo "[OK] insgesamt: $(( SIZE1 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
 
 unix2from_gitfile() { for UNIX in $( git log -1 --date=unix -- "$1" | grep ^Date: ); do :; done; echo "$UNIX"; }
 unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
