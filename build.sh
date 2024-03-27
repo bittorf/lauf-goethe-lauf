@@ -59,21 +59,23 @@ echo "[OK] $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
 echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
-iso8601fromfile() { date +"%Y-%m-%dT%H:%M:%S%:z" -r "$1"; }
+unix2from_gitfile() { for UNIX in $( git log -1 --date=unix -- "$1" | grep ^Date: ); do :; done; echo "$UNIX"; }
+unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
 
 # insert real change date into sitemap:
 #
+set -x
 PATTERN='2024-03-25T16:33:40+00:00-A'
-NEW="$( iso8601fromfile 'v2/index.html' )"
+UNIX="$( unix2from_gitfile 'v2/index.html' )"
+NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
 PATTERN='2024-03-25T16:33:40+00:00-B'
-NEW="$( iso8601fromfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
+UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
+NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 cat dest/sitemap.xml
-ls -l v2
-ls -l dest
-
+set +x
 echo
 echo "##################"
 
