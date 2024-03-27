@@ -5,9 +5,11 @@
 # https://github.com/asdf-vm/asdf-plugins
 
 if command -v 'asdf'; then
-	asdf plugin add imagemagick
-	asdf install imagemagick latest
-	asdf global imagemagick latest
+	command -v 'convert' || {
+		asdf plugin add imagemagick
+		asdf install imagemagick latest
+		asdf global imagemagick latest
+	}
 else
 	:
 fi
@@ -62,9 +64,8 @@ echo "[OK] insgesamt: $(( SIZE1 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 unix2from_gitfile() { for UNIX in $( git log -1 --date=unix -- "$1" | grep ^Date: ); do :; done; echo "$UNIX"; }
 unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
 
-# insert real change date into sitemap:
+# insert real change date into sitemap - FIXME! it does not work
 #
-set -x
 PATTERN='2024-03-25T16:33:40+00:00-A'
 UNIX="$( unix2from_gitfile 'v2/index.html' )"
 NEW="$( unix2iso8601 "$UNIX" )"
@@ -74,8 +75,7 @@ PATTERN='2024-03-25T16:33:40+00:00-B'
 UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
-cat dest/sitemap.xml
-set +x
+
 echo
 echo "##################"
 
