@@ -43,18 +43,20 @@ filesize_bytes() { wc -c <"$1"; }
 
 echo
 for SIZE1 in $(du -sb dest); do break; done
-echo "[OK] alles sind $SIZE1 bytes"
+echo "[OK] alles zusammen sind $SIZE1 bytes"
+echo
 echo "[OK] resizing fotos to 700px"
 
 find dest -type f -name 'foto-*' | while read -r LINE; do {
-	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE"
+	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE" || echo "[ERROR] $? on '$LINE'"
 } done
 
 echo
 for SIZE2 in $(du -sb dest); do break; done
 echo "[OK] resizing fotos to 700px: $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
 
-echo "[OK] resizing logos to 250px:"	# FIXME! to jpg
+echo
+echo "[OK] resizing logos to 250px:"	# FIXME! to jpg?
 find dest -type f -name 'logo*' | while read -r LINE; do {
 	width=888
 	# shellcheck disable=SC2046
@@ -72,8 +74,8 @@ echo
 for SIZE3 in $(du -sb dest); do break; done
 echo "[OK] resizing logos to 250px: $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
 
-
-echo "[OK] stripping metadata"
+echo
+echo "[OK] stripping metadata:"
 for SIZE4 in $(du -sb dest); do break; done
 #
 find dest/media/ -type f | while read -r LINE; do {
@@ -87,7 +89,7 @@ find dest/media/ -type f | while read -r LINE; do {
 rm -f original
 #
 for SIZE5 in $(du -sb dest); do break; done
-echo "[OK] metadata removed: $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
+echo "[OK] stripping metadata: $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
 
 echo
 echo "[OK] insgesamt: $(( SIZE1 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
