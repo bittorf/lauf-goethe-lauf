@@ -115,10 +115,13 @@ while read -r LINE <&4; do {
 
 			echo "  <figcaption>"
 
-			[ -n "$HREF" ] && \
-			echo "   <a href='$HREF'>$TITLE</a>"
+			if [ -n "$HREF" ]; then
+				echo "   <a href='$HREF'>$TITLE</a>"
+			else
+				echo "$TITLE"
+			fi
 
-			echo "  </figcaption"
+			echo "  </figcaption>"
 			echo "</figure>"
 		}
 
