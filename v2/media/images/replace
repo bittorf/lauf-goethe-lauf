@@ -78,14 +78,18 @@ while read -r LINE <&4; do {
 		HEIGHT="$(       jq -r '.height'   "$JSON" )"
 
 		ALT=;   read -r ALT   <"$DIR/$BASENAME.alt" || continue
-		HREF=;  read -r HREF  <"$DIR/$BASENAME.href" || continue
 		TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
+		HREF=;  read -r HREF  2>/dev/null <"$DIR/$BASENAME.href"
+
+		case "$TEMPLATE" in *eager*) LOAD='eager' ;; *) LOAD='lazy' ;; esac
 
 		out()
 		{
 			echo "<figure id='$BASENAME'>"
+
 			[ -n "$HREF" ] && \
 			echo " <a href='$HREF'>"
+
 			echo "  <picture>"
 
 			# https://danburzo.ro/responsive-images-html/
@@ -98,19 +102,22 @@ while read -r LINE <&4; do {
 					echo "    <source srcset='$RELATIVE_IMAGE' type='image/$FORMAT'>"
 				else
 					echo "          <img src='$RELATIVE_IMAGE' "
-					echo "               loading='lazy' width='$WIDTH' height='$HEIGHT' "
+					echo "               loading='$LOAD' width='$WIDTH' height='$HEIGHT' "
 					echo "               alt='${ALT:-$BASEFILE}' "
 					echo "               title='$TITLE'>"
 				fi
 			} done
 
 			echo "  </picture>"
+
 			[ -n "$HREF" ] && \
 			echo " </a>"
 
 			echo "  <figcaption>"
+
 			[ -n "$HREF" ] && \
 			echo "   <a href='$HREF'>$TITLE</a>"
+
 			echo "  </figcaption"
 			echo "</figure>"
 		}

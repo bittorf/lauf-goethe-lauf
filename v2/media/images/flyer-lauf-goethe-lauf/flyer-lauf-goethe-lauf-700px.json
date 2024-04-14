@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/flyer-lauf-goethe-lauf.jpg-2256600bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/flyer-lauf-goethe-lauf.jpg JPEG 2481x3508 2481x3508+0+0 8-bit sRGB 2.15206MiB 0.000u 0:00.000",
+ "original_size": 2256600,
+ "width": 700,
+ "height": 909,
+ "basename": "flyer-lauf-goethe-lauf-700px",
+ "avif": { "size": 12691, "ssimulacra2": 67.97, "butteraugli":  7.18, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-700px-quality-20-unchanged.avif" },
+ "png":  { "size": 13952, "ssimulacra2": 75.62, "butteraugli":  7.93, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-700px-quality-1-unchanged.png" },
+ "formats": [ "avif", "png" ]
+}
