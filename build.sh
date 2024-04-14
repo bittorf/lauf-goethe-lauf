@@ -4,21 +4,21 @@
 # https://asdf-vm.com/
 # https://github.com/asdf-vm/asdf-plugins
 
-if command -v 'asdf'; then
-	command -v 'convert' || {
-		asdf plugin add imagemagick
-		asdf install imagemagick latest
-		asdf global imagemagick latest
-	}
-else
-	:
-fi
-
-if command -v 'convert'; then
-	convert --version
-else
-	exit 1
-fi
+#if command -v 'asdf'; then
+#	command -v 'convert' || {
+#		asdf plugin add imagemagick
+#		asdf install imagemagick latest
+#		asdf global imagemagick latest
+#	}
+#else
+#	:
+#fi
+#
+#if command -v 'convert'; then
+#	convert --version
+#else
+#	:
+#fi
 
 test -d dest && rm -fR dest
 cp -pR v2/ dest/
@@ -39,61 +39,6 @@ cp -pR v2/ dest/
 echo "# ls dest/"
 ls -l dest/
 
-filesize_bytes() { wc -c <"$1"; }
-
-echo
-for SIZE1 in $(du -sb dest); do break; done
-echo "[OK] alles zusammen sind $SIZE1 bytes"
-echo
-echo "[OK] resizing fotos to 700px"
-
-find dest -type f -name 'foto-*' | while read -r LINE; do {
-	convert "$LINE" -resize 700 -quality 60 +profile "*" +comment "$LINE" || echo "[ERROR] $? on '$LINE'"
-} done
-
-echo
-for SIZE2 in $(du -sb dest); do break; done
-echo "[OK] resizing fotos to 700px: $(( SIZE1 - SIZE2 )) bytes gespart, nun: $SIZE2 bytes"
-
-echo
-echo "[OK] resizing logos to 250px:"	# FIXME! to jpg?
-find dest -type f -name 'logo*' | while read -r LINE; do {
-	width=888
-	# shellcheck disable=SC2046
-	eval $( identify -format 'width=%w;height=%h;ok=true;\n' "$LINE" 2>/dev/null )
-
-	test "$width" -le 250 && continue
-	S1="$( filesize_bytes "$LINE" )"
-	convert "$LINE" -resize 250 -quality 60 +profile "*" +comment "$LINE"
-	S2="$( filesize_bytes "$LINE" )"
-
-	test "$S2" -gt "$S1" && echo "[HINT] file now bigger: $S2 > $S1 bytes - $LINE"
-} done
-
-echo
-for SIZE3 in $(du -sb dest); do break; done
-echo "[OK] resizing logos to 250px: $(( SIZE2 - SIZE3 )) bytes gespart, nun: $SIZE3 bytes"
-
-echo
-echo "[OK] stripping metadata:"
-for SIZE4 in $(du -sb dest); do break; done
-#
-find dest/media/ -type f | while read -r LINE; do {
-	cp "$LINE" original
-	S1="$( filesize_bytes "$LINE" )"
-	convert "$LINE" -strip "$LINE"
-	S2="$( filesize_bytes "$LINE" )"
-
-	test "$S2" -gt "$S1" && cp original "$LINE"
-} done
-rm -f original
-#
-for SIZE5 in $(du -sb dest); do break; done
-echo "[OK] stripping metadata: $(( SIZE4 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
-
-echo
-echo "[OK] insgesamt: $(( SIZE1 - SIZE5 )) bytes gespart, nun: $SIZE5 bytes"
-
 unix2from_gitfile() { for UNIX in $( git log -1 --date=unix -- "$1" | grep ^Date: ); do :; done; echo "$UNIX"; }
 unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
 
@@ -108,6 +53,8 @@ PATTERN='2024-03-25T16:33:40+00:00-B'
 UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
+
+( cd v2/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
 
 # debug dates: - seems the checkout is done using --depth=1 so we have no history - FIXME!
 echo "# git log -7"

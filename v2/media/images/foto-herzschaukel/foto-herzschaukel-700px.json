@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-herzschaukel.jpeg-2622084bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-herzschaukel.jpeg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 2.50061MiB 0.000u 0:00.000",
+ "original_size": 2622084,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-herzschaukel-700px",
+ "webp": { "size": 95048, "ssimulacra2": 43.44, "butteraugli":  6.20, "method": "imagemagick-webp-unchanged-15%", "file": "image-imagemagick-700px-quality-15-unchanged.webp" },
+ "jpg":  { "size": 98729, "ssimulacra2": 47.11, "butteraugli":  6.26, "method": "cjpegli-jpg-unchanged-35%", "file": "image-cjpegli-700px-quality-35-unchanged.jpg" },
+ "avif": { "size": 99699, "ssimulacra2": 53.01, "butteraugli":  7.07, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-700px-quality-30-unchanged.avif" },
+ "formats": [ "webp", "jpg", "avif" ]
+}

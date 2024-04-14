@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/logo-hsv-weimar.jpg-23641bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-hsv-weimar.jpg JPEG 391x391 391x391+0+0 8-bit sRGB 23641B 0.000u 0:00.000",
+ "original_size": 23641,
+ "width": 250,
+ "height": 250,
+ "basename": "logo-hsv-weimar-250px",
+ "avif": { "size": 1131, "ssimulacra2": 66.97, "butteraugli":  7.44, "method": "avifenc-avif-unchanged-13%", "file": "image-avifenc-250px-quality-13-unchanged.avif" },
+ "webp": { "size": 1770, "ssimulacra2": 59.02, "butteraugli":  8.12, "method": "imagemagick-webp-c32-4%", "file": "image-imagemagick-250px-quality-4-c32.webp" },
+ "png":  { "size": 2446, "ssimulacra2": 60.67, "butteraugli":  7.30, "method": "pngquant-png-c64-1%", "file": "image-pngquant-250px-quality-1-c64.png" },
+ "formats": [ "avif", "webp", "png" ]
+}

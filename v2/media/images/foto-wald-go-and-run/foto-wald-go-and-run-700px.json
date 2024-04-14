@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-wald-go-and-run.jpg-2722812bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/foto-wald-go-and-run.jpg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 2.59668MiB 0.000u 0:00.000",
+ "original_size": 2722812,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-wald-go-and-run-700px",
+ "avif": { "size": 76046, "ssimulacra2": 49.88, "butteraugli":  7.96, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-700px-quality-30-unchanged.avif" },
+ "webp": { "size": 78870, "ssimulacra2": 43.38, "butteraugli":  6.54, "method": "imagemagick-webp-unchanged-18%", "file": "image-imagemagick-700px-quality-18-unchanged.webp" },
+ "jpg":  { "size": 79600, "ssimulacra2": 48.67, "butteraugli":  5.88, "method": "cjpegli-jpg-unchanged-35%", "file": "image-cjpegli-700px-quality-35-unchanged.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}

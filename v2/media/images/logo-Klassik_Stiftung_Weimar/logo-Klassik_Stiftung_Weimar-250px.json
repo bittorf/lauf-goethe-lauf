@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-Klassik_Stiftung_Weimar.jpg-5352bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-Klassik_Stiftung_Weimar.jpg JPEG 250x120 250x120+0+0 8-bit sRGB 5352B 0.000u 0:00.000",
+ "original_size": 5352,
+ "width": 250,
+ "height": 120,
+ "basename": "logo-Klassik_Stiftung_Weimar-250px",
+ "avif": { "size": 1377, "ssimulacra2": 75.47, "butteraugli":  5.88, "method": "avifenc-avif-unchanged-15%", "file": "image-avifenc-250px-quality-15-unchanged.avif" },
+ "png":  { "size": 1990, "ssimulacra2": 65.54, "butteraugli":  6.11, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "avif", "png" ]
+}

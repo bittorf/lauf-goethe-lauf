@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-fernrohr.jpeg-2195389bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-fernrohr.jpeg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 2.09369MiB 0.000u 0:00.000",
+ "original_size": 2195389,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-fernrohr-700px",
+ "avif": { "size": 48732, "ssimulacra2": 44.23, "butteraugli":  7.14, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-700px-quality-30-unchanged.avif" },
+ "jpg":  { "size": 58314, "ssimulacra2": 48.03, "butteraugli":  5.18, "method": "cjpegli-jpg-unchanged-35%", "file": "image-cjpegli-700px-quality-35-unchanged.jpg" },
+ "webp": { "size": 61044, "ssimulacra2": 40.49, "butteraugli":  7.58, "method": "imagemagick-webp-unchanged-23%", "file": "image-imagemagick-700px-quality-23-unchanged.webp" },
+ "formats": [ "avif", "jpg", "webp" ]
+}

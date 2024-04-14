@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-holzstammlager.jpeg-2094290bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-holzstammlager.jpeg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 1.99727MiB 0.000u 0:00.000",
+ "original_size": 2094290,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-holzstammlager-700px",
+ "avif": { "size": 46002, "ssimulacra2": 57.68, "butteraugli":  5.42, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "webp": { "size": 52270, "ssimulacra2": 51.41, "butteraugli":  6.04, "method": "imagemagick-webp-unchanged-30%", "file": "image-imagemagick-700px-quality-30-unchanged.webp" },
+ "jpg":  { "size": 55572, "ssimulacra2": 50.39, "butteraugli":  5.99, "method": "cjpegli-jpg-unchanged-35%", "file": "image-cjpegli-700px-quality-35-unchanged.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}

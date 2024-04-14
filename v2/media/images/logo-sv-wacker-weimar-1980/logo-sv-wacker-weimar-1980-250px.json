@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/logo-sv-wacker-weimar-1980.jpg-11840bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-sv-wacker-weimar-1980.jpg JPEG 180x176 180x176+0+0 8-bit sRGB 11840B 0.000u 0:00.000",
+ "original_size": 11840,
+ "width": 250,
+ "height": 250,
+ "basename": "logo-sv-wacker-weimar-1980-250px",
+ "avif": { "size": 2433, "ssimulacra2": 67.80, "butteraugli":  7.00, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-250px-quality-20-unchanged.avif" },
+ "webp": { "size": 3282, "ssimulacra2": 62.41, "butteraugli":  7.25, "method": "imagemagick-webp-unchanged-8%", "file": "image-imagemagick-250px-quality-8-unchanged.webp" },
+ "png":  { "size": 5271, "ssimulacra2": 67.18, "butteraugli":  6.83, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "avif", "webp", "png" ]
+}

@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-druckerei-kessler-signet_jubi-rot.jpg-115190bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-druckerei-kessler-signet_jubi-rot.jpg JPEG 600x329 600x329+0+0 8-bit sRGB 115190B 0.010u 0:00.004",
+ "original_size": 115190,
+ "width": 250,
+ "height": 137,
+ "basename": "logo-druckerei-kessler-250px",
+ "png":  { "size": 3238, "ssimulacra2": 63.74, "butteraugli":  6.66, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "avif": { "size": 3365, "ssimulacra2": 74.45, "butteraugli":  3.08, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-250px-quality-30-unchanged.avif" },
+ "formats": [ "png", "avif" ]
+}

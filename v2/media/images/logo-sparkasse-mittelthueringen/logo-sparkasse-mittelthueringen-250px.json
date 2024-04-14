@@ -1,0 +1,10 @@
+{
+ "url": "http://bwireless.mooo.com/logo-sparkasse-mittelthueringen.jpg-24503bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-sparkasse-mittelthueringen.jpg JPEG 300x118 300x118+0+0 8-bit sRGB 24503B 0.000u 0:00.000",
+ "original_size": 24503,
+ "width": 250,
+ "height": 87,
+ "basename": "logo-sparkasse-mittelthueringen-250px",
+ "png":  { "size": 1127, "ssimulacra2": 88.38, "butteraugli":  3.16, "method": "pngquant-png-unchanged-2%", "file": "image-pngquant-250px-quality-2-unchanged.png" },
+ "formats": [ "png" ]
+}

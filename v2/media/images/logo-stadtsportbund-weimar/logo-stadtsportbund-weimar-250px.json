@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-stadtsportbund-weimar.png-10254bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-stadtsportbund-weimar.png PNG 1000x380 1000x380+0+0 8-bit sRGB 10254B 0.000u 0:00.000",
+ "original_size": 10254,
+ "width": 250,
+ "height": 86,
+ "basename": "logo-stadtsportbund-weimar-250px",
+ "webp": { "size": 1198, "ssimulacra2": 49.67, "butteraugli": 10.27, "method": "imagemagick-webp-c4-45%", "file": "image-imagemagick-250px-quality-45-c4.webp" },
+ "png":  { "size": 1351, "ssimulacra2": 42.19, "butteraugli":  8.62, "method": "pngquant-png-c8-1%", "file": "image-pngquant-250px-quality-1-c8.png" },
+ "formats": [ "webp", "png" ]
+}

@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-busunternehmen-schuchort.jpg-4771bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-busunternehmen-schuchort.jpg JPEG 250x69 250x69+0+0 8-bit sRGB 4771B 0.000u 0:00.000",
+ "original_size": 4771,
+ "width": 250,
+ "height": 69,
+ "basename": "logo-busunternehmen-schuchort-250px",
+ "webp": { "size": 1394, "ssimulacra2": 23.48, "butteraugli":  8.69, "method": "imagemagick-webp-unchanged-3%", "file": "image-imagemagick-250px-quality-3-unchanged.webp" },
+ "png":  { "size": 2458, "ssimulacra2": 30.91, "butteraugli":  5.66, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "webp", "png" ]
+}

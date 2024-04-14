@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-lichtwald.jpg-4406041bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/foto-lichtwald.jpg JPEG 4624x3472 4624x3472+0+0 8-bit sRGB 4.20193MiB 0.000u 0:00.000",
+ "original_size": 4406041,
+ "width": 700,
+ "height": 526,
+ "basename": "foto-lichtwald-700px",
+ "avif": { "size": 52966, "ssimulacra2": 47.69, "butteraugli":  5.58, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-700px-quality-30-unchanged.avif" },
+ "jpg":  { "size": 57333, "ssimulacra2": 50.76, "butteraugli":  4.74, "method": "mozcjpeg-jpg-unchanged-45%", "file": "image-mozcjpeg-700px-quality-45-unchanged.jpg" },
+ "webp": { "size": 57334, "ssimulacra2": 37.92, "butteraugli":  5.29, "method": "imagemagick-webp-unchanged-15%", "file": "image-imagemagick-700px-quality-15-unchanged.webp" },
+ "formats": [ "avif", "jpg", "webp" ]
+}

@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/logo-vfb-oberweimar.png-172900bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-vfb-oberweimar.png PNG 1540x1540 1540x1540+0+0 8-bit sRGB 172900B 0.000u 0:00.000",
+ "original_size": 172900,
+ "width": 250,
+ "height": 247,
+ "basename": "logo-vfb-oberweimar-250px",
+ "avif": { "size": 1674, "ssimulacra2": 72.02, "butteraugli":  7.90, "method": "avifenc-avif-unchanged-10%", "file": "image-avifenc-250px-quality-10-unchanged.avif" },
+ "webp": { "size": 2592, "ssimulacra2": 67.79, "butteraugli":  6.14, "method": "imagemagick-webp-c64-1%", "file": "image-imagemagick-250px-quality-1-c64.webp" },
+ "png":  { "size": 2973, "ssimulacra2": 74.93, "butteraugli":  6.20, "method": "pngquant-png-unchanged-3%", "file": "image-pngquant-250px-quality-3-unchanged.png" },
+ "formats": [ "avif", "webp", "png" ]
+}

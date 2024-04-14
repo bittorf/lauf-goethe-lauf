@@ -1,0 +1,13 @@
+{
+ "url": "http://bwireless.mooo.com/logo-cfc-weimar.png-23639bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-cfc-weimar.png PNG 135x172 135x172+0+0 8-bit sRGB 23639B 0.000u 0:00.000",
+ "original_size": 23639,
+ "width": 250,
+ "height": 317,
+ "basename": "logo-cfc-weimar-250px",
+ "avif": { "size": 904, "ssimulacra2": 59.11, "butteraugli": 11.81, "method": "avifenc-avif-unchanged-18%", "file": "image-avifenc-250px-quality-18-unchanged.avif" },
+ "webp": { "size": 1146, "ssimulacra2": 56.27, "butteraugli": 12.23, "method": "imagemagick-webp-c64-5%", "file": "image-imagemagick-250px-quality-5-c64.webp" },
+ "jpg":  { "size": 1925, "ssimulacra2": 43.60, "butteraugli": 12.02, "method": "imagemagick-jpg-c64-11%", "file": "image-imagemagick-250px-quality-11-c64.jpg" },
+ "png":  { "size": 2188, "ssimulacra2": 53.10, "butteraugli": 11.06, "method": "pngquant-png-unchanged-2%", "file": "image-pngquant-250px-quality-2-unchanged.png" },
+ "formats": [ "avif", "webp", "jpg", "png" ]
+}

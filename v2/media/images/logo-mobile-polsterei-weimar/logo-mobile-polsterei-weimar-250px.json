@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/logo-mobile-posterei-weimar.jpg-59252bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-mobile-posterei-weimar.jpg JPEG 880x350 880x350+0+0 8-bit sRGB 59252B 0.000u 0:00.000",
+ "original_size": 59252,
+ "width": 250,
+ "height": 98,
+ "basename": "logo-mobile-polsterei-weimar-250px",
+ "avif": { "size": 1481, "ssimulacra2": 59.99, "butteraugli":  6.68, "method": "avifenc-avif-unchanged-25%", "file": "image-avifenc-250px-quality-25-unchanged.avif" },
+ "webp": { "size": 1626, "ssimulacra2": 49.68, "butteraugli":  6.76, "method": "imagemagick-webp-c256-13%", "file": "image-imagemagick-250px-quality-13-c256.webp" },
+ "png":  { "size": 2801, "ssimulacra2": 47.65, "butteraugli":  7.05, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "avif", "webp", "png" ]
+}

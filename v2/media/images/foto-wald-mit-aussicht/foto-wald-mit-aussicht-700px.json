@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-wald-mit-aussicht.jpg-1572838bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/foto-wald-mit-aussicht.jpg JPEG 4624x3472 4624x3472+0+0 8-bit sRGB 1.49998MiB 0.000u 0:00.000",
+ "original_size": 1572838,
+ "width": 700,
+ "height": 526,
+ "basename": "foto-wald-mit-aussicht-700px",
+ "jpg":  { "size": 35670, "ssimulacra2": 56.41, "butteraugli":  3.83, "method": "cjpegli-jpg-unchanged-60%", "file": "image-cjpegli-700px-quality-60-unchanged.jpg" },
+ "webp": { "size": 38958, "ssimulacra2": 54.08, "butteraugli":  4.20, "method": "imagemagick-webp-unchanged-50%", "file": "image-imagemagick-700px-quality-50-unchanged.webp" },
+ "avif": { "size": 40159, "ssimulacra2": 65.53, "butteraugli":  3.76, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-700px-quality-50-unchanged.avif" },
+ "formats": [ "jpg", "webp", "avif" ]
+}

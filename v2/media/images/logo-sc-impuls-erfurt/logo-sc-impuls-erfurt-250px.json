@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-sc-impuls-erfurt.png-29323bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-sc-impuls-erfurt.png PNG 426x94 426x94+0+0 8-bit sRGB 29323B 0.000u 0:00.000",
+ "original_size": 29323,
+ "width": 250,
+ "height": 57,
+ "basename": "logo-sc-impuls-erfurt-250px",
+ "avif": { "size": 1248, "ssimulacra2": 37.43, "butteraugli": 11.74, "method": "avifenc-avif-unchanged-8%", "file": "image-avifenc-250px-quality-8-unchanged.avif" },
+ "png":  { "size": 1549, "ssimulacra2": 63.18, "butteraugli": 10.58, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "avif", "png" ]
+}

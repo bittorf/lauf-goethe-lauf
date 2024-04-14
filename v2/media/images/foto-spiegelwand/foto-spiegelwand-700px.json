@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-spiegelwand.jpeg-2374830bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-spiegelwand.jpeg JPEG 4624x3472 4624x3472+0+0 8-bit sRGB 2.26481MiB 0.000u 0:00.000",
+ "original_size": 2374830,
+ "width": 700,
+ "height": 526,
+ "basename": "foto-spiegelwand-700px",
+ "avif": { "size": 35269, "ssimulacra2": 53.81, "butteraugli":  6.61, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "webp": { "size": 37298, "ssimulacra2": 48.33, "butteraugli":  5.23, "method": "imagemagick-webp-unchanged-25%", "file": "image-imagemagick-700px-quality-25-unchanged.webp" },
+ "jpg":  { "size": 39411, "ssimulacra2": 53.94, "butteraugli":  5.29, "method": "cjpegli-jpg-unchanged-45%", "file": "image-cjpegli-700px-quality-45-unchanged.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}

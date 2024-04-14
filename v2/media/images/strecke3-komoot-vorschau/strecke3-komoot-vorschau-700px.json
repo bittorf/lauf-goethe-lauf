@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/strecke3-komoot-vorschau.png-313909bytes-stuff",
+ "original": "/home/bastian/Schreibtisch/lauf-webseite/strecke3-komoot-vorschau.png PNG 739x854 739x854+0+0 8-bit sRGB 313909B 0.000u 0:00.000",
+ "original_size": 313909,
+ "width": 700,
+ "height": 804,
+ "basename": "strecke3-komoot-vorschau-700px",
+ "avif": { "size": 14334, "ssimulacra2": 29.53, "butteraugli": 10.84, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-700px-quality-20-unchanged.avif" },
+ "webp": { "size": 19492, "ssimulacra2": 21.77, "butteraugli": 11.28, "method": "imagemagick-webp-c256-8%", "file": "image-imagemagick-700px-quality-8-c256.webp" },
+ "jpg":  { "size": 31994, "ssimulacra2": 47.65, "butteraugli":  7.75, "method": "mozcjpeg-jpg-c256-35%", "file": "image-mozcjpeg-700px-quality-35-c256.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}

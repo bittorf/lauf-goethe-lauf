@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-deutsche-sarkom-stiftung.jpg-171288bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-deutsche-sarkom-stiftung.jpg JPEG 744x308 744x308+0+0 8-bit sRGB 171288B 0.000u 0:00.000",
+ "original_size": 171288,
+ "width": 250,
+ "height": 106,
+ "basename": "logo-deutsche-sarkom-stiftung-250px",
+ "png":  { "size": 2516, "ssimulacra2": 43.29, "butteraugli":  4.80, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "avif": { "size": 2565, "ssimulacra2": 65.55, "butteraugli":  3.84, "method": "avifenc-avif-unchanged-25%", "file": "image-avifenc-250px-quality-25-unchanged.avif" },
+ "formats": [ "png", "avif" ]
+}

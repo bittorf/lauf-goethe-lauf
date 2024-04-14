@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-waldbadezimmer.jpeg-3067141bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-waldbadezimmer.jpeg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 2.92505MiB 0.000u 0:00.000",
+ "original_size": 3067141,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-waldbadezimmer-700px",
+ "avif": { "size": 90426, "ssimulacra2": 46.31, "butteraugli":  6.99, "method": "avifenc-avif-unchanged-25%", "file": "image-avifenc-700px-quality-25-unchanged.avif" },
+ "webp": { "size": 109180, "ssimulacra2": 45.71, "butteraugli":  5.59, "method": "imagemagick-webp-unchanged-15%", "file": "image-imagemagick-700px-quality-15-unchanged.webp" },
+ "jpg":  { "size": 110022, "ssimulacra2": 54.12, "butteraugli":  4.71, "method": "mozcjpeg-jpg-unchanged-45%", "file": "image-mozcjpeg-700px-quality-45-unchanged.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}

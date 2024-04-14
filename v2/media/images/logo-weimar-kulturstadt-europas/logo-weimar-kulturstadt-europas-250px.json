@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-weimar-kulturstadt-europas.jpg-130014bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-weimar-kulturstadt-europas.jpg JPEG 1008x416 1008x416+0+0 8-bit sRGB 130014B 0.000u 0:00.000",
+ "original_size": 130014,
+ "width": 250,
+ "height": 97,
+ "basename": "logo-weimar-kulturstadt-europas-250px",
+ "avif": { "size": 1161, "ssimulacra2": 57.15, "butteraugli":  8.64, "method": "avifenc-avif-unchanged-7%", "file": "image-avifenc-250px-quality-7-unchanged.avif" },
+ "png":  { "size": 1247, "ssimulacra2": 78.27, "butteraugli":  9.17, "method": "pngquant-png-unchanged-2%", "file": "image-pngquant-250px-quality-2-unchanged.png" },
+ "formats": [ "avif", "png" ]
+}

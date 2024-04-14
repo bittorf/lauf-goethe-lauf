@@ -1,0 +1,72 @@
+#!/bin/sh
+# shellcheck shell=dash
+
+[ -z "$1" ] && {
+	cat <<!
+Usage: $0 <url> <variant1> <variantN>
+
+ e.g.: $0 http://10.63.22.98/.../example-34399bytes/data.json avifenc-avif-unchanged-23% imagemagick-webp-c256-8%
+       RENAME=foo $0 \$JSON variant1 variant2
+
+This helper should be placed in your image folder.
+It builds a JSON file for your specific images and
+downloads these image variants with a proper naming scheme.
+The JSON can later be used e.g. for a HTML-templating pipeline.
+
+$ ls -1
+example-700px.avif
+example-700px.json
+example-700px.webp
+
+!
+	exit 1
+}
+
+URL="$1"	# the JSON url, e.g. http://10.63.22.98/optimize/example.png-343997bytes/data.json
+shift		# now all variants, e.g. avifenc-avif-unchanged-20%
+
+DELIMITER='\|'	# an logical OR for grep
+PATTERN=
+for P in "$@"; do {
+	PATTERN="${PATTERN}${PATTERN:+$DELIMITER}${P}"
+} done
+
+log() { >&2 printf '%s\n' "$1"; }
+
+case "$URL" in *'/') URL="${URL}data.json" ;; esac
+
+BASEURL="$( dirname "$URL" )"
+BASENAME="$( curl --silent "$URL" | jq -r '.basename' )" || {		# e.g. example-700px
+	log "[ERROR] is '$URL' a valid JSON document?"; exit 1
+}
+
+BASENAME_ORIGINAL="$BASENAME"
+[ -n "$RENAME" ] && {
+	BASENAME="$RENAME-$( curl --silent "$URL" | jq -r '.width' )px"
+	log "[OK] renamed to '$BASENAME'"
+}
+
+DIR="$( echo "$BASENAME" | sed 's/-[0-9]*px$//' )"		# e.g. example
+mkdir -p "$DIR"
+
+FORMAT_LIST=
+curl -s "$URL" | sed "s/\"$BASENAME_ORIGINAL\"/\"$BASENAME\"/" | while read -r LINE; do {
+	case "$LINE" in
+		'{') echo "$LINE" ;;
+		*'"method"'*)
+			echo " $LINE" | grep "$PATTERN" && {
+				FORMAT="$( echo "$LINE" | cut -d'"' -f2 )"
+				FORMAT_LIST="${FORMAT_LIST}${FORMAT_LIST:+, }\"${FORMAT}\""
+				FILE="$( echo "{ $LINE \"eof\": true }" | jq -r ".$FORMAT.file" )"
+
+				log "[OK] downloading format '$FORMAT' to '$BASENAME.$FORMAT' in '$DIR'"
+				curl --silent "$BASEURL/$FILE" --output "$DIR/$BASENAME.$FORMAT" || log "[ERROR] curl '$BASEURL/$FILE' - RC:$?"
+			}
+		;;
+		*'"formats"'*) ;;
+		'}') echo " \"formats\": [ $FORMAT_LIST ]"; echo "}" ;;
+		*) echo " $LINE" ;;
+	esac
+} done >"$DIR/$BASENAME.json"
+
+log "[OK] wrote file '$DIR/$BASENAME.json'"

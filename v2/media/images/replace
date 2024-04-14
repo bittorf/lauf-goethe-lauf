@@ -1,0 +1,141 @@
+#!/bin/sh
+# shellcheck shell=dash
+
+FILE_HTML="$1"
+DIR_IMAGES="$2"
+
+[ -f "$FILE_HTML" ] || {
+	cat <<!
+Usage: $0 <htmlfile> <image-directory>
+
+ e.g.: $0 ../../index.html .
+
+This script will replace all occurences of
+<!-- image:example template:figcaption -->
+with a proper 'image-tag' and 'srcset' like
+described in https://danburzo.ro/responsive-images-html/
+
+The new HTML is written to stdout.
+
+It needs proper files, e.g.:
+example.avif
+example.webp
+example.jpg
+ and
+example.json
+ and
+example.alt
+example.title
+example.href
+
+!
+	exit 1
+}
+
+# default=lazy
+# <!-- image:strecke1-komoot-vorschau template:figcaption -->
+
+listoutput_basename_and_template_type()
+{
+	while read -r LINE; do {
+		case "$LINE" in
+			*'<!-- image:'*' template:'*' -->'*)
+				IMAGE=; TEMPLATE=;
+
+				for WORD in $LINE; do {
+					case "$WORD" in
+						image:*) IMAGE="${WORD#*:}" ;;
+						template:*) TEMPLATE="${WORD#*:}" ;;
+					esac
+
+					[ -n "$IMAGE" ] && [ -n "$TEMPLATE" ] && {
+						echo "$IMAGE $TEMPLATE"
+						IMAGE=; TEMPLATE=;
+					}
+				} done
+			;;
+		esac
+	} done <"$FILE_HTML"
+}
+
+TMP1="$( mktemp )" || exit 1
+TMP2="$( mktemp )" || exit 1
+TMP3="$( mktemp )" || exit 1
+cp "$FILE_HTML" "$TMP3"
+
+# e.g.: strecke1-komoot-vorschau figcaption
+listoutput_basename_and_template_type >"$TMP1"
+while read -r LINE <&4; do {
+	for IMAGE in $LINE; do break; done
+	for TEMPLATE in $LINE; do :; done
+
+	find "$DIR_IMAGES" -type f -name "${IMAGE}*.json" >"$TMP2"
+	while read -r JSON <&5; do {
+		DIR="$( dirname -- "$JSON" )"
+		LIST_FORMATS="$( jq -r '.formats | join(" ")' "$JSON" )"	# e.g. avif webp jpg
+		BASENAME="$(     jq -r '.basename' "$JSON" )"
+		WIDTH="$(        jq -r '.width'    "$JSON" )"
+		HEIGHT="$(       jq -r '.height'   "$JSON" )"
+
+		ALT=;   read -r ALT   <"$DIR/$BASENAME.alt" || continue
+		HREF=;  read -r HREF  <"$DIR/$BASENAME.href" || continue
+		TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
+
+		out()
+		{
+			echo "<figure id='$BASENAME'>"
+			[ -n "$HREF" ] && \
+			echo " <a href='$HREF'>"
+			echo "  <picture>"
+
+			# https://danburzo.ro/responsive-images-html/
+			for LAST in $LIST_FORMATS; do :; done
+			for FORMAT in $LIST_FORMATS; do {
+				DOCUMENT_ROOTDIR="$( dirname -- "$( readlink -f "$FILE_HTML" )" )"
+				RELATIVE_IMAGE="$( cd "$DOCUMENT_ROOTDIR" && find . -type f -name "$BASENAME.$FORMAT" | sed 's|^\./||' )"
+
+				if [ "$FORMAT" != "$LAST" ]; then
+					echo "    <source srcset='$RELATIVE_IMAGE' type='image/$FORMAT'>"
+				else
+					echo "          <img src='$RELATIVE_IMAGE' "
+					echo "               loading='lazy' width='$WIDTH' height='$HEIGHT' "
+					echo "               alt='${ALT:-$BASEFILE}' "
+					echo "               title='$TITLE'>"
+				fi
+			} done
+
+			echo "  </picture>"
+			[ -n "$HREF" ] && \
+			echo " </a>"
+
+			echo "  <figcaption>"
+			[ -n "$HREF" ] && \
+			echo "   <a href='$HREF'>$TITLE</a>"
+			echo "  </figcaption"
+			echo "</figure>"
+		}
+
+		out_escaped()
+		{
+			out | sed -e "s|\/|\\\/|g" -e 's/(/\\\(/g' -e 's/)/\\\)/g' -e 's/&/\\&/g' | sed ':a;N;$!ba;s/\n/\\n/g'
+		}
+
+		sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3"
+	} done 5<"$TMP2"
+} done 4<"$TMP1"
+
+cat "$TMP3"
+rm -f "$TMP1" "$TMP2" "$TMP3"
+
+#{
+# "url": "http://bwireless.mooo.com/strecke1-komoot-vorschau.png-300704bytes-stuff",
+# "original": "/home/bastian/Schreibtisch/lauf-webseite/strecke1-komoot-vorschau.png PNG 747x857 747x857+0+0 8-bit sRGB 300704B 0.000u 0:00.000",
+# "original_size": 300704,
+# "width": 700,
+# "height": 804,
+# "basename": "strecke1-komoot-vorschau-700px",
+# "avif": { "size": 13654, "ssimulacra2": 25.13, "butteraugli": 11.16, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-700px-quality-20-unchanged.avif" },
+# "webp": { "size": 18994, "ssimulacra2": 19.36, "butteraugli": 10.44, "method": "imagemagick-webp-c256-8%", "file": "image-imagemagick-700px-quality-8-c256.webp" },
+# "jpg":  { "size": 31055, "ssimulacra2": 47.15, "butteraugli":  7.93, "method": "mozcjpeg-jpg-c256-35%", "file": "image-mozcjpeg-700px-quality-35-c256.jpg" },
+# "formats": [ "avif", "webp", "jpg" ]
+#}

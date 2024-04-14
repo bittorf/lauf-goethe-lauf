@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/foto-schloss-grosskochberg.jpg-3492922bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/foto-schloss-grosskochberg.jpg JPEG 3472x4624 3472x4624+0+0 8-bit sRGB 3.33111MiB 0.000u 0:00.000",
+ "original_size": 3492922,
+ "width": 700,
+ "height": 932,
+ "basename": "foto-schloss-grosskochberg-700px",
+ "jpg":  { "size": 78968, "ssimulacra2": 31.10, "butteraugli":  7.15, "method": "imagemagick-jpg-unchanged-25%", "file": "image-imagemagick-700px-quality-25-unchanged.jpg" },
+ "avif": { "size": 81107, "ssimulacra2": 38.93, "butteraugli":  6.29, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-700px-quality-30-unchanged.avif" },
+ "formats": [ "jpg", "avif" ]
+}

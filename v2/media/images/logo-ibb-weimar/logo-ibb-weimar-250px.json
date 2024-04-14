@@ -1,0 +1,10 @@
+{
+ "url": "http://bwireless.mooo.com/logo-ibb-weimar.png-21582bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/logo-ibb-weimar.png PNG 616x142 616x142+0+0 8-bit sRGB 21582B 0.000u 0:00.000",
+ "original_size": 21582,
+ "width": 250,
+ "height": 52,
+ "basename": "logo-ibb-weimar-250px",
+ "png":  { "size": 1593, "ssimulacra2": 91.03, "butteraugli":  2.24, "method": "pngquant-png-unchanged-4%", "file": "image-pngquant-250px-quality-4-unchanged.png" },
+ "formats": [ "png" ]
+}

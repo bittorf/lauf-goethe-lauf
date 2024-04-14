@@ -1,0 +1,11 @@
+{
+ "url": "http://bwireless.mooo.com/logo-weimarerland_hauptlogo-farbig.webp-7060bytes-stuff",
+ "original": "../lauf-goethe-lauf/dest/media/logo-weimarerland_hauptlogo-farbig.webp WEBP 596x209 596x209+0+0 8-bit sRGB 7060B 0.000u 0:00.001",
+ "original_size": 7060,
+ "width": 250,
+ "height": 88,
+ "basename": "logo-weimarerland-250px",
+ "avif": { "size": 2051, "ssimulacra2": 63.23, "butteraugli":  6.55, "method": "avifenc-avif-unchanged-10%", "file": "image-avifenc-250px-quality-10-unchanged.avif" },
+ "png":  { "size": 2115, "ssimulacra2": 50.66, "butteraugli":  7.79, "method": "pngquant-png-c64-1%", "file": "image-pngquant-250px-quality-1-c64.png" },
+ "formats": [ "avif", "png" ]
+}

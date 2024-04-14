@@ -1,0 +1,10 @@
+{
+ "url": "http://bwireless.mooo.com/logo_komoot_green_RGB_v2-1.svg-4296bytes-stuff",
+ "original": "../lauf-goethe-lauf/dest/media/logo_komoot_green_RGB_v2-1.svg SVG 358x108 358x108+0+0 8-bit sRGB 9397B 0.000u 0:00.000",
+ "original_size": 4296,
+ "width": 250,
+ "height": 75,
+ "basename": "logo-komoot-250px",
+ "png":  { "size": 863, "ssimulacra2": 64.73, "butteraugli":  9.42, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "formats": [ "png" ]
+}

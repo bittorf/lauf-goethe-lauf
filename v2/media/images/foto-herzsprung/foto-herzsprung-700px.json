@@ -1,0 +1,12 @@
+{
+ "url": "http://bwireless.mooo.com/foto-herzsprung.jpeg-549960bytes-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/old/foto-herzsprung.jpeg JPEG 1537x2048 1537x2048+0+0 8-bit sRGB 549960B 0.000u 0:00.000",
+ "original_size": 549960,
+ "width": 700,
+ "height": 933,
+ "basename": "foto-herzsprung-700px",
+ "avif": { "size": 56892, "ssimulacra2": 52.05, "butteraugli":  9.19, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "webp": { "size": 57454, "ssimulacra2": 41.04, "butteraugli":  5.41, "method": "imagemagick-webp-unchanged-23%", "file": "image-imagemagick-700px-quality-23-unchanged.webp" },
+ "jpg":  { "size": 59262, "ssimulacra2": 48.30, "butteraugli":  5.53, "method": "cjpegli-jpg-unchanged-35%", "file": "image-cjpegli-700px-quality-35-unchanged.jpg" },
+ "formats": [ "avif", "webp", "jpg" ]
+}
