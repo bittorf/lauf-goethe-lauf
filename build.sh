@@ -54,7 +54,8 @@ UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilneh
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
-( cd v2/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
+( set -x && cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
+set +x
 
 # debug dates: - seems the checkout is done using --depth=1 so we have no history - FIXME!
 echo "# git log -7"
