@@ -4,6 +4,12 @@
 # https://asdf-vm.com/
 # https://github.com/asdf-vm/asdf-plugins
 
+command -v 'jq' || {
+	asdf plugin-add jq  # https://github.com/ryodocx/asdf-jq.git
+	asdf install jq latest
+	asdf global jq latest
+}
+
 #if command -v 'asdf'; then
 #	command -v 'convert' || {
 #		asdf plugin add imagemagick
