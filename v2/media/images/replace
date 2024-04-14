@@ -81,11 +81,15 @@ while read -r LINE <&4; do {
 		TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
 		HREF=;  read -r HREF  2>/dev/null <"$DIR/$BASENAME.href"
 
+		# make it HTML safe:
+		TITLE="$( echo "$TITLE" | sed "s/'/\&apos;/g" )"
+		ALT="$(   echo "$ALT"   | sed "s/'/\&apos;/g" )"
+
 		case "$TEMPLATE" in *eager*) LOAD='eager' ;; *) LOAD='lazy' ;; esac
 
 		out()
 		{
-			echo "<figure id='$BASENAME'>"
+			echo "<figure>"
 
 			[ -n "$HREF" ] && \
 			echo " <a href='$HREF'>"
