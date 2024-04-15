@@ -4,27 +4,23 @@
 # https://asdf-vm.com/
 # https://github.com/asdf-vm/asdf-plugins
 
-command -v 'jq' || {
-	asdf plugin-add jq  # https://github.com/ryodocx/asdf-jq.git
+command -v 'asdf' && {
+  command -v 'jq' || {
+	asdf plugin-add jq
 	asdf install jq latest
 	asdf global jq latest
+  }
+
+  command -v 'zip' || {
+	asdf plugin-add zip
+	asdf install zip latest
+	asdf global zip latest
+  }
 }
 
-#if command -v 'asdf'; then
-#	command -v 'convert' || {
-#		asdf plugin add imagemagick
-#		asdf install imagemagick latest
-#		asdf global imagemagick latest
-#	}
-#else
-#	:
-#fi
-#
-#if command -v 'convert'; then
-#	convert --version
-#else
-#	:
-#fi
+# asdf plugin add imagemagick
+# asdf install imagemagick latest
+# asdf global imagemagick latest
 
 test -d dest && rm -fR dest
 cp -pR v2/ dest/
