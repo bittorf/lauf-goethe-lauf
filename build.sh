@@ -53,8 +53,9 @@ cp -pR v2/ dest/
 	mv  TEMP2   normalize.css
 
 	# build: magick.css
-	mv  TEMP3   magick.css
-	cat TEMP1 >>magick.css
+	mv    TEMP3   magick.css
+	cat   TEMP1 >>magick.css
+	rm -f TEMP1
 
 	echo "# head magick.css"
 	head magick.css
@@ -84,6 +85,12 @@ echo
 echo "# replacing image:comments with HTML:"
 ( cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
 
+
+echo
+echo "# remove unneeded files:"
+rm -f dest/media/images/dl
+rm -f dest/media/images/replace
+find dest/media/images/ -type f | grep ".json$\|.href$\|.title$\|.alt$" | while read -r LINE; do rm -f "$LINE"; done
 
 echo
 echo "# all files:"
