@@ -11,6 +11,16 @@ command -v 'asdf' && {
 	asdf global jq latest
   }
 
+  command -v 'npm' || {
+	asdf plugin-add npm
+	asdf install npm latest
+	asdf global npm latest
+  }
+
+  command -v 'cross-zip' || {
+	npm install -g cross-zip-cli
+  }
+
   # asdf plugin add imagemagick
   # asdf install imagemagick latest
   # asdf global imagemagick latest
@@ -19,11 +29,6 @@ command -v 'asdf' && {
 
 test -d dest && rm -fR dest
 cp -pR v2/ dest/
-
-
-echo
-echo "# produce a zip-file:"
-git archive --format=zip --output dest/zipfile.zip master
 
 
 (
@@ -97,7 +102,7 @@ echo "# producing zipfile:"
   ZIP="$NEWDIR.zip"
   cd dest/media && \
   mv originals "$NEWDIR" && \
-  zip "$ZIP" "$NEWDIR/"* && \
+  cross-zip "$NEWDIR" "$ZIP" && \
   rm -fR "$NEWDIR"
 )
 
