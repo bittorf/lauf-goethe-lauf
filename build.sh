@@ -31,51 +31,69 @@ cp -pR v2/ dest/
 
 (
   cd dest && {
+    # TEMP1: join 'magick' + 'private'
     cat "magick-no-comments-no-empty-lines.css"
     echo
     cat "private.css"
   } >TEMP1 && {
-	# TEMP2
-	mv normalize-no-comments-no-empty-lines.css TEMP2
-	sed -i '/@charset/d' TEMP2
-	sed -i '/@import/d'  TEMP2
+	# TEMP1: remove unneeded stuff
+	sed -i '/@charset/d' TEMP1
+	sed -i '/@import/d'  TEMP1
 
-	# TEMP3
+	# TEMP2: normalize
+	mv normalize-no-comments-no-empty-lines.css TEMP2
+
+	# TEMP3: fonts
 	mv google-fonts-1713205420107.css TEMP3
 
-	# build: normalize.css
+	# cleanup:
 	rm -f ./*.css
-	mv  TEMP3   normalize.css
-	cat TEMP2 >>normalize.css && rm -f TEMP2
+
+	# build: normalize.css
+	mv  TEMP2   normalize.css
 
 	# build: magick.css
-	mv TEMP1 magick.css
+	mv  TEMP3   magick.css
+	cat TEMP1 >>magick.css
+
+	echo "# head magick.css"
+	head magick.css
+	echo
   }
 )
 
-echo "# ls dest/"
-ls -l dest/
-
+echo
+echo "# building sitemap:"
 unix2from_gitfile() { for UNIX in $( git log -1 --date=unix -- "$1" | grep ^Date: ); do :; done; echo "$UNIX"; }
 unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
-
+#
 # insert real change date into sitemap - FIXME! it does not work
 #
 PATTERN='2024-03-25T16:33:40+00:00-A'
 UNIX="$( unix2from_gitfile 'v2/index.html' )"
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
-
+#
 PATTERN='2024-03-25T16:33:40+00:00-B'
 UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 NEW="$( unix2iso8601 "$UNIX" )"
 sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
 
+
+echo
+echo "# replacing image:comments with HTML:"
 ( cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
 
-( cd dest/ && find . -type f -ls )
-exit 0
 
+echo
+echo "# all files:"
+echo
+( cd dest/ && find . -type f -ls )
+
+
+
+ignore_the_rest()
+{
 # debug dates: - seems the checkout is done using --depth=1 so we have no history - FIXME!
 echo "# git log -7"
 git log -7
@@ -130,6 +148,8 @@ command -v 'validatehtml' && {
 	)
 
 	exit $?
+}
+
 }
 
 true
