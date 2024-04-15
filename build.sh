@@ -10,20 +10,6 @@ command -v 'asdf' && {
 	asdf install jq latest
 	asdf global jq latest
   }
-
-  command -v 'npm' || {
-	asdf plugin-add npm
-	asdf install npm latest
-	asdf global npm latest
-  }
-
-  command -v 'qzip' || {
-	npm install -g qiao-zip-cli
-  }
-
-  # asdf plugin add imagemagick
-  # asdf install imagemagick latest
-  # asdf global imagemagick latest
 }
 
 
@@ -75,12 +61,12 @@ unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
 PATTERN='2024-03-25T16:33:40+00:00-A'
 UNIX="$( unix2from_gitfile 'v2/index.html' )"
 NEW="$( unix2iso8601 "$UNIX" )"
-sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep "$NEW" dest/sitemap.xml
 #
 PATTERN='2024-03-25T16:33:40+00:00-B'
 UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 NEW="$( unix2iso8601 "$UNIX" )"
-sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep "$NEW" dest/sitemap.xml
 
 
 echo
@@ -96,15 +82,8 @@ find dest/media/images/ -type f | grep ".json$\|.href$\|.title$\|.alt$" | while 
 
 
 echo
-echo "# producing zipfile:"
-(
-  NEWDIR='www.lauf-goethe-lauf.de-images-original'
-  ZIP="$NEWDIR.zip"
-  cd dest/media && \
-  mv originals "$NEWDIR" && \
-  qzip zip "$NEWDIR" "$ZIP" && \
-  rm -fR "$NEWDIR"
-)
+echo "# removing originals"
+rm -fR dest/media/originals
 
 
 echo
