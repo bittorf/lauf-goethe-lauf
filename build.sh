@@ -1,29 +1,30 @@
 #!/bin/sh
 
-# https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
-# https://asdf-vm.com/
-# https://github.com/asdf-vm/asdf-plugins
-
 command -v 'asdf' && {
+  # https://arup.dev/blog/2024/jekyll-cloudflare-pages-imagemagick/
+  # https://asdf-vm.com/
+  # https://github.com/asdf-vm/asdf-plugins
+
   command -v 'jq' || {
 	asdf plugin-add jq
 	asdf install jq latest
 	asdf global jq latest
   }
 
-  command -v 'zip' || {
-	asdf plugin-add zip
-	asdf install zip latest
-	asdf global zip latest
-  }
+  # asdf plugin add imagemagick
+  # asdf install imagemagick latest
+  # asdf global imagemagick latest
 }
 
-# asdf plugin add imagemagick
-# asdf install imagemagick latest
-# asdf global imagemagick latest
 
 test -d dest && rm -fR dest
 cp -pR v2/ dest/
+
+
+echo
+echo "# produce a zip-file:"
+git archive --format=zip --output dest/zipfile.zip master
+
 
 (
   cd dest && {
