@@ -17,8 +17,8 @@ command -v 'asdf' && {
 	asdf global npm latest
   }
 
-  command -v 'cross-zip' || {
-	npm install -g cross-zip-cli
+  command -v 'qzip' || {
+	npm install -g qiao-zip-cli
   }
 
   # asdf plugin add imagemagick
@@ -102,7 +102,7 @@ echo "# producing zipfile:"
   ZIP="$NEWDIR.zip"
   cd dest/media && \
   mv originals "$NEWDIR" && \
-  cross-zip "$NEWDIR" "$ZIP" && \
+  qzip zip "$NEWDIR" "$ZIP" && \
   rm -fR "$NEWDIR"
 )
 
