@@ -92,6 +92,19 @@ rm -f dest/media/images/dl
 rm -f dest/media/images/replace
 find dest/media/images/ -type f | grep ".json$\|.href$\|.title$\|.alt$" | while read -r LINE; do rm -f "$LINE"; done
 
+
+echo
+echo "# producing zipfile:"
+(
+  NEWDIR='www.lauf-goethe-lauf.de-images-original'
+  ZIP="$NEWDIR.zip"
+  cd dest/media && \
+  mv originals "$NEWDIR" && \
+  zip "$ZIP" "$NEWDIR/"* && \
+  rm -fR "$NEWDIR"
+)
+
+
 echo
 echo "# all files:"
 echo
