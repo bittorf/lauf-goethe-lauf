@@ -35,9 +35,20 @@ cp -pR v2/ dest/
     echo
     cat "private.css"
   } >TEMP1 && {
+	# TEMP2
 	mv normalize-no-comments-no-empty-lines.css TEMP2
+	sed -i '/@charset/d' TEMP2
+	sed -i '/@import/d'  TEMP2
+
+	# TEMP3
+	mv google-fonts-1713205420107.css TEMP3
+
+	# build: normalize.css
 	rm -f ./*.css
-	mv TEMP2 normalize.css
+	mv  TEMP3   normalize.css
+	cat TEMP2 >>normalize.css && rm -f TEMP2
+
+	# build: magick.css
 	mv TEMP1 magick.css
   }
 )
