@@ -61,12 +61,12 @@ unix2iso8601() { date +'%Y-%m-%dT%H:%M:%S%:z' -d@"$1"; }
 PATTERN='2024-03-25T16:33:40+00:00-A'
 UNIX="$( unix2from_gitfile 'v2/index.html' )"
 NEW="$( unix2iso8601 "$UNIX" )"
-sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep "$NEW" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 #
 PATTERN='2024-03-25T16:33:40+00:00-B'
 UNIX="$( unix2from_gitfile 'v2/media/Lauf-Goethe-lauf_Haftungsausschluss_Teilnehmer.pdf' )"
 NEW="$( unix2iso8601 "$UNIX" )"
-sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep "$NEW" dest/sitemap.xml
+sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 
 
 echo
@@ -91,6 +91,9 @@ echo "# all files:"
 echo
 ( cd dest/ && find . -type f -ls )
 
+
+echo "# needed storage overall:"
+( cd dest/ && du -sh . )
 
 
 ignore_the_rest()
