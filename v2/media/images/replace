@@ -11,7 +11,10 @@ Usage: $0 <htmlfile> <image-directory>
  e.g.: $0 ../../index.html .
 
 This script will replace all occurences of
+
 <!-- image:example template:figcaption -->
+<!-- image:example template:favicon,16,inline -->
+
 with a proper 'image-tag' and 'srcset' like
 described in https://danburzo.ro/responsive-images-html/
 
@@ -69,7 +72,15 @@ while read -r LINE <&4; do {
 	for IMAGE in $LINE; do break; done
 	for TEMPLATE in $LINE; do :; done
 
-	find "$DIR_IMAGES" -type f -name "${IMAGE}*.json" >"$TMP2"
+	# e.g. template:favicon,16,inline
+	PX="$( echo "$TEMPLATE" | cut -d',' -f2 )"
+
+	if [ -n "$PX" ]; then
+		find "$DIR_IMAGES" -type f -name "${IMAGE}-$PX*.json" >"$TMP2"
+	else
+		find "$DIR_IMAGES" -type f -name "${IMAGE}*.json" >"$TMP2"
+	fi
+
 	while read -r JSON <&5; do {
 		DIR="$( dirname -- "$JSON" )"
 		LIST_FORMATS="$( jq -r '.formats | join(" ")' "$JSON" )"	# e.g. avif webp jpg
@@ -77,6 +88,26 @@ while read -r LINE <&4; do {
 		WIDTH="$(        jq -r '.width'    "$JSON" )"
 		HEIGHT="$(       jq -r '.height'   "$JSON" )"
 
+		case "$TEMPLATE" in
+			*favicon*inline)
+				for FORMAT in $LIST_FORMATS; do break; done
+
+				DOCUMENT_ROOTDIR="$( dirname -- "$( readlink -f "$FILE_HTML" )" )"
+				RELATIVE_IMAGE="$( cd "$DOCUMENT_ROOTDIR" && find . -type f -name "$BASENAME.$FORMAT" | sed 's|^\./||' )"
+
+				BASE64="$( cat "$DIR/$BASENAME.$FORMAT" | base64 -w0 )"
+				URI="data:image/$FORMAT;base64,$BASE64"
+
+				out()
+				{
+					case "$TEMPLATE" in
+						 *,16,*) echo "<link rel='icon' type='image/$FORMAT' sizes='16x16' href='$URI'>" ;;
+						 *,32,*) echo "<link rel='icon' type='image/$FORMAT' sizes='32x32' href='$URI'>" ;;
+						*,180,*) echo "<link rel='apple-touch-icon' sizes='180x180' href='$URI'>" ;;
+					esac
+				}
+			;;
+			figcaption|*)
 		ALT=;   read -r ALT   <"$DIR/$BASENAME.alt" || continue
 		TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
 		HREF=;  read -r HREF  2>/dev/null <"$DIR/$BASENAME.href"
@@ -128,13 +159,18 @@ while read -r LINE <&4; do {
 			echo "  </figcaption>"
 			echo "</figure>"
 		}
+			;;
+		esac
 
 		out_escaped()
 		{
 			out | sed -e "s|\/|\\\/|g" -e 's/(/\\\(/g' -e 's/)/\\\)/g' -e 's/&/\\&/g' | sed ':a;N;$!ba;s/\n/\\n/g'
 		}
 
-		sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3"
+		case "$TEMPLATE" in
+			*favicon*) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#$( out )#g"             "$TMP3" ;;
+			        *) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3" ;;
+		esac
 	} done 5<"$TMP2"
 } done 4<"$TMP1"
 

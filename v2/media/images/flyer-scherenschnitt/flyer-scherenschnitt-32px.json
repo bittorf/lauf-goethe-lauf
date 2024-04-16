@@ -1,0 +1,10 @@
+{
+ "url": "http://bwireless.mooo.com/flyer-scherenschnitt.png-11549bytes-to-32px-stuff",
+ "original": "../lauf-goethe-lauf/v2/media/originals/flyer-scherenschnitt.png PNG 180x180 180x180+0+0 8-bit sRGB 11549B 0.000u 0:00.002",
+ "original_size": 11549,
+ "width": 32,
+ "height": 32,
+ "basename": "flyer-scherenschnitt-32px",
+ "png":  { "size": 191, "ssimulacra2": 53.77, "butteraugli":  6.32, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-32px-quality-1-unchanged.png" },
+ "formats": [ "png" ]
+}

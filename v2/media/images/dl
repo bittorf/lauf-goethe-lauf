@@ -13,7 +13,7 @@ It builds a JSON file for your specific images and
 downloads these image variants with a proper naming scheme.
 The JSON can later be used e.g. for a HTML-templating pipeline.
 
-$ ls -1
+$ ls -1 example/
 example-700px.avif
 example-700px.json
 example-700px.webp
