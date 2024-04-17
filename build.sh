@@ -71,8 +71,8 @@ sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 
 echo
 echo "# replacing image:comments with HTML:"
-( cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
-
+( set -x; cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
+set +x
 
 echo
 echo "# remove unneeded files:"
