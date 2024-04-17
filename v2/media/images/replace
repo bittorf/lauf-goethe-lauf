@@ -176,7 +176,7 @@ set -x
 		}
 
 		case "$TEMPLATE" in
-			*favicon*) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#$( out )#g"             "$TMP3" ;;
+			*favicon*) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#$(   out_escaped )#g"   "$TMP3" ;;
 			        *) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3" ;;
 		esac
 	} done 5<"$TMP2"
