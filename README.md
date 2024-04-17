@@ -6,16 +6,18 @@
 * https://pagespeed.web.dev alle Kategorien 100%
 * index.html alles inline, mit brotli compression ca. 10K
 ```
+user@box:~$ URL='https://www.lauf-goethe-lauf.de/'
+
 # 47k plain
-user@box:~$ curl --silent https://www.lauf-goethe-lauf.de/ | wc -c
+user@box:~$ curl --silent "$URL" | wc -c
 47189
 
-# 11k mit brotli
-user@box:~$ curl --silent --header 'Accept-Encoding: br,gzip,deflate' https://www.lauf-goethe-lauf.de/ | wc -c
+# 11k mit brotli-Kompression
+user@box:~$ curl --silent --header 'Accept-Encoding: br,gzip,deflate' "$URL" | wc -c
 10865
 
-# 0.2 sekunden (rendering <1 sec)
-bastian@ryzen:~$ time curl --silent --header 'Accept-Encoding: br,gzip,deflate' https://www.lauf-goethe-lauf.de/ >/dev/null 
+# Ladezeit: 0.2 sekunden (rendering <1 sec)
+user@box:~$ time curl --silent --header 'Accept-Encoding: br,gzip,deflate' "$URL" >/dev/null 
 real	0m0,183s
 
 ```
