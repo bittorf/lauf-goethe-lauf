@@ -71,7 +71,7 @@ sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 
 echo
 echo "# replacing image:comments with HTML:"
-( cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
+( cd dest/media/images/ && ./replace ../../index.html . autodelete >tmp && mv tmp ../../index.html )
 
 
 echo
@@ -96,6 +96,9 @@ echo
 
 echo "# needed storage overall in [kilobytes]"
 ( cd dest/ && find . -type f -exec du -c {} + | grep total$ )
+echo
+echo "# build ready"
+echo
 
 
 ignore_the_rest()
