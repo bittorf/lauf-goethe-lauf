@@ -10,6 +10,15 @@ command -v 'asdf' && {
 	asdf install jq latest
 	asdf global jq latest
   }
+
+  command -v 'npm' || {
+	asdf plugin-add npm
+	asdf install npm latest
+	asdf global npm latest
+  }
+
+  # https://github.com/addyosmani/critical/
+  npm install -D critical
 }
 
 
@@ -72,6 +81,20 @@ sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 echo
 echo "# replacing image:comments with HTML:"
 ( cd dest/media/images/ && ./replace ../../index.html . autodelete >tmp && mv tmp ../../index.html )
+
+(
+  echo
+  echo "# inlining CSS with 'critical'"
+
+  command -v 'critical' && \
+  cd dest && \
+  cat index.html | critical --inline >index.critical.html && \
+  sed -i '/normalize.css/d' index.critical.html && \
+  sed -i '/magick.css/d' index.critical.html && \
+  ls -l *.html && \
+  mv index.critical.html index.html && \
+  rm -f *.css
+)
 
 
 echo
