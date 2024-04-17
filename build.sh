@@ -94,8 +94,8 @@ echo
 ( cd dest/ && find . -type f -ls )
 
 
-echo "# needed storage overall:"
-( cd dest/ && du -sh . )
+echo "# needed storage overall in [kilobytes]"
+( cd dest/ && find . -type f -exec du -c {} + | grep total$ )
 
 
 ignore_the_rest()
