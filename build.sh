@@ -11,14 +11,14 @@ command -v 'asdf' && {
 	asdf global jq latest
   }
 
-  command -v 'npm' || {
-	asdf plugin-add npm
-	asdf install npm latest
-	asdf global npm latest
-  }
-
-  # https://github.com/addyosmani/critical/
-  npm install -D critical
+# command -v 'npm' || {
+#	asdf plugin-add npm
+#	asdf install npm latest
+#	asdf global npm latest
+# }
+#
+# # https://github.com/addyosmani/critical/
+# npm install -D critical
 }
 
 
@@ -84,15 +84,23 @@ echo "# replacing image:comments with HTML:"
 
 (
   echo
-  echo "# inlining CSS with 'critical'"
+  echo "# inlining CSS using 'critical' prebuilt 'style-critical.css'"
 
-  command -v 'critical' && \
+  # this was produced like:
+  # npm install -D critical
+  # wget -qO - "https://lauf-goethe-lauf.de/normalize.css"
+  # wget -qO - "https://lauf-goethe-lauf.de/magick.css"
+  # wget -qO - "https://lauf-goethe-lauf.de" | critical --inline >index.critical.html"
+  # grep '<style' index.critical.html >style-critical.css
+
   cd dest && \
-  cat index.html | critical --inline >index.critical.html && \
-  sed -i '/normalize.css/d' index.critical.html && \
-  sed -i '/magick.css/d' index.critical.html && \
+  sed -n '/DOCTYPE html/,/magick.css/p' index.html >index-new.html && \
+  sed -i '/normalize.css/d' index-new.html && \
+  sed -i '/magick.css/d'    index-new.html && \
+  cat style-critical.css  >>index-new.html && \
+  sed -n '/rel="canonical"/,$p' index.html >>index-new.html && \
   ls -l *.html && \
-  mv index.critical.html index.html && \
+  mv index-new.html index.html && \
   rm -f *.css
 )
 
