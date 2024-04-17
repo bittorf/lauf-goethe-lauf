@@ -38,7 +38,6 @@ example.href
 
 # default=lazy
 # <!-- image:strecke1-komoot-vorschau template:figcaption -->
-
 listoutput_basename_and_template_type()
 {
 	while read -r LINE; do {
@@ -61,6 +60,8 @@ listoutput_basename_and_template_type()
 		esac
 	} done <"$FILE_HTML"
 }
+
+log() { >&2 printf '%s\n' "$1"; }
 
 TMP1="$( mktemp )" || exit 1
 TMP2="$( mktemp )" || exit 1
@@ -181,7 +182,7 @@ while read -r LINE <&4; do {
 			        *) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3" ;;
 		esac
 
-		[ "$OPTION" = autodelete ] && echo "[DEBUG] todo: autodelete '$TEMPLATE' - '$DIR/$BASENAME.$FORMAT'"
+		[ "$OPTION" = autodelete ] && log "[DEBUG] todo: autodelete '$TEMPLATE' - '$DIR/$BASENAME.$FORMAT'"
 	} done 5<"$TMP2"
 } done 4<"$TMP1"
 
