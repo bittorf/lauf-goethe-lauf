@@ -73,7 +73,7 @@ while read -r LINE <&4; do {
 	for TEMPLATE in $LINE; do :; done
 
 	# e.g. template:favicon,16,inline
-	PX="$( echo "$TEMPLATE" | cut -d',' -f2 )"
+	PX="$( echo "$TEMPLATE" | cut -d',' -f2 )"	# e.g. 16,32,180
 
 	if [ -n "$PX" ]; then
 		find "$DIR_IMAGES" -type f -name "${IMAGE}-$PX*.json" >"$TMP2"
@@ -87,7 +87,7 @@ while read -r LINE <&4; do {
 		BASENAME="$(     jq -r '.basename' "$JSON" )"
 		WIDTH="$(        jq -r '.width'    "$JSON" )"
 		HEIGHT="$(       jq -r '.height'   "$JSON" )"
-
+set -x
 		case "$TEMPLATE" in
 			*favicon*inline)
 				for FORMAT in $LIST_FORMATS; do break; done
@@ -100,65 +100,73 @@ while read -r LINE <&4; do {
 
 				out()
 				{
-					case "$TEMPLATE" in
-						 *,16,*) echo "<link rel='icon' type='image/$FORMAT' sizes='16x16' href='$URI'>" ;;
-						 *,32,*) echo "<link rel='icon' type='image/$FORMAT' sizes='32x32' href='$URI'>" ;;
-						*,180,*) echo "<link rel='apple-touch-icon' sizes='180x180' href='$URI'>" ;;
+					PX="$( echo "$TEMPLATE" | cut -d',' -f2 )"	# e.g. 16,32,180
+
+					case "$PX" in
+						16|32)
+							echo "<link rel='icon' type='image/$FORMAT' sizes='${PX}x${PX}' "
+							echo " href='$URI'>"
+						;;
+						180)
+							# https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/
+							echo "<link rel='apple-touch-icon' sizes='${PX}x${PX}' "
+							echo   href='$URI'>" ;;
+						;;
 					esac
 				}
 			;;
 			figcaption|*)
-		ALT=;   read -r ALT   <"$DIR/$BASENAME.alt" || continue
-		TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
-		HREF=;  read -r HREF  2>/dev/null <"$DIR/$BASENAME.href"
+				ALT=;   read -r ALT   <"$DIR/$BASENAME.alt" || continue
+				TITLE=; read -r TITLE <"$DIR/$BASENAME.title" || continue
+				HREF=;  read -r HREF  2>/dev/null <"$DIR/$BASENAME.href"
 
-		# make it HTML safe:
-		TITLE="$( echo "$TITLE" | sed "s/'/\&apos;/g" )"
-		ALT="$(   echo "$ALT"   | sed "s/'/\&apos;/g" )"
+				# make it HTML safe:
+				TITLE="$( echo "$TITLE" | sed "s/'/\&apos;/g" )"
+				ALT="$(   echo "$ALT"   | sed "s/'/\&apos;/g" )"
 
-		case "$TEMPLATE" in *eager*) LOAD='eager' ;; *) LOAD='lazy' ;; esac
+				case "$TEMPLATE" in *eager*) LOAD='eager' ;; *) LOAD='lazy' ;; esac
 
-		out()
-		{
-			echo "<figure>"
+				out()
+				{
+					echo "<figure>"
 
-			[ -n "$HREF" ] && \
-			echo " <a href='$HREF'>"
+					[ -n "$HREF" ] && \
+					echo " <a href='$HREF'>"
 
-			echo "  <picture>"
+					echo "  <picture>"
 
-			# https://danburzo.ro/responsive-images-html/
-			for LAST in $LIST_FORMATS; do :; done
-			for FORMAT in $LIST_FORMATS; do {
-				DOCUMENT_ROOTDIR="$( dirname -- "$( readlink -f "$FILE_HTML" )" )"
-				RELATIVE_IMAGE="$( cd "$DOCUMENT_ROOTDIR" && find . -type f -name "$BASENAME.$FORMAT" | sed 's|^\./||' )"
+					# https://danburzo.ro/responsive-images-html/
+					for LAST in $LIST_FORMATS; do :; done
+					for FORMAT in $LIST_FORMATS; do {
+						DOCUMENT_ROOTDIR="$( dirname -- "$( readlink -f "$FILE_HTML" )" )"
+						RELATIVE_IMAGE="$( cd "$DOCUMENT_ROOTDIR" && find . -type f -name "$BASENAME.$FORMAT" | sed 's|^\./||' )"
 
-				if [ "$FORMAT" != "$LAST" ]; then
-					echo "    <source srcset='$RELATIVE_IMAGE' type='image/$FORMAT'>"
-				else
-					echo "          <img src='$RELATIVE_IMAGE' "
-					echo "               loading='$LOAD' width='$WIDTH' height='$HEIGHT' "
-					echo "               alt='${ALT:-$BASEFILE}' "
-					echo "               title='$TITLE'>"
-				fi
-			} done
+						if [ "$FORMAT" != "$LAST" ]; then
+							echo "    <source srcset='$RELATIVE_IMAGE' type='image/$FORMAT'>"
+						else
+							echo "          <img src='$RELATIVE_IMAGE' "
+							echo "               loading='$LOAD' width='$WIDTH' height='$HEIGHT' "
+							echo "               alt='${ALT:-$BASEFILE}' "
+							echo "               title='$TITLE'>"
+						fi
+					} done
 
-			echo "  </picture>"
+					echo "  </picture>"
 
-			[ -n "$HREF" ] && \
-			echo " </a>"
+					[ -n "$HREF" ] && \
+					echo " </a>"
 
-			echo "  <figcaption>"
+					echo "  <figcaption>"
 
-			if [ -n "$HREF" ]; then
-				echo "   <a href='$HREF'>$TITLE</a>"
-			else
-				echo "$TITLE"
-			fi
+					if [ -n "$HREF" ]; then
+						echo "   <a href='$HREF'>$TITLE</a>"
+					else
+						echo "$TITLE"
+					fi
 
-			echo "  </figcaption>"
-			echo "</figure>"
-		}
+					echo "  </figcaption>"
+					echo "</figure>"
+				}
 			;;
 		esac
 
