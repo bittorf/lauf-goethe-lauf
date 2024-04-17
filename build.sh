@@ -71,13 +71,15 @@ sed -i "s/$PATTERN/$NEW/" dest/sitemap.xml && grep -H "$NEW" dest/sitemap.xml
 
 echo
 echo "# replacing image:comments with HTML:"
-( set -x; cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
-set +x
+( cd dest/media/images/ && ./replace ../../index.html . >tmp && mv tmp ../../index.html )
+
 
 echo
 echo "# remove unneeded files:"
-rm -f dest/media/images/dl
-rm -f dest/media/images/replace
+rm -f  dest/media/images/dl
+rm -f  dest/media/images/replace
+rm -fR dest/media/images/flyer-scherenschnitt
+
 find dest/media/images/ -type f | grep ".json$\|.href$\|.title$\|.alt$" | while read -r LINE; do rm -f "$LINE"; done
 
 

@@ -3,6 +3,7 @@
 
 FILE_HTML="$1"
 DIR_IMAGES="$2"
+OPTION="$3"		# e.g. autodelete
 
 [ -f "$FILE_HTML" ] || {
 	cat <<!
@@ -87,7 +88,7 @@ while read -r LINE <&4; do {
 		BASENAME="$(     jq -r '.basename' "$JSON" )"
 		WIDTH="$(        jq -r '.width'    "$JSON" )"
 		HEIGHT="$(       jq -r '.height'   "$JSON" )"
-set -x
+
 		case "$TEMPLATE" in
 			*favicon*inline)
 				for FORMAT in $LIST_FORMATS; do break; done
@@ -105,12 +106,12 @@ set -x
 					case "$PX" in
 						16|32)
 							echo "<link rel='icon' type='image/$FORMAT' sizes='${PX}x${PX}' "
-							echo " href='$URI'>"
+							echo "  href='$URI'>"
 						;;
 						180)
 							# https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/
 							echo "<link rel='apple-touch-icon' sizes='${PX}x${PX}' "
-							echo " href='$URI'>"
+							echo "  href='$URI'>"
 						;;
 					esac
 				}
@@ -179,6 +180,8 @@ set -x
 			*favicon*) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#$(   out_escaped )#g"   "$TMP3" ;;
 			        *) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3" ;;
 		esac
+
+		[ "$OPTION" = autodelete ] && echo "[DEBUG] todo: autodelete '$TEMPLATE' - '$DIR/$BASENAME.$FORMAT'"
 	} done 5<"$TMP2"
 } done 4<"$TMP1"
 
