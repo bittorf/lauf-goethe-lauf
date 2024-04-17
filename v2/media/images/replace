@@ -95,7 +95,7 @@ set -x
 				DOCUMENT_ROOTDIR="$( dirname -- "$( readlink -f "$FILE_HTML" )" )"
 				RELATIVE_IMAGE="$( cd "$DOCUMENT_ROOTDIR" && find . -type f -name "$BASENAME.$FORMAT" | sed 's|^\./||' )"
 
-				BASE64="$( cat "$DIR/$BASENAME.$FORMAT" | base64 -w0 )"
+				BASE64="$( base64 -w0 <"$DIR/$BASENAME.$FORMAT" )"
 				URI="data:image/$FORMAT;base64,$BASE64"
 
 				out()
@@ -110,7 +110,7 @@ set -x
 						180)
 							# https://webhint.io/docs/user-guide/hints/hint-apple-touch-icons/
 							echo "<link rel='apple-touch-icon' sizes='${PX}x${PX}' "
-							echo   href='$URI'>" ;;
+							echo " href='$URI'>"
 						;;
 					esac
 				}
