@@ -75,7 +75,7 @@ while read -r LINE <&4; do {
 	# e.g. template:favicon,16,inline
 	PX="$( echo "$TEMPLATE" | cut -d',' -f2 )"	# e.g. 16,32,180
 
-	if [ -n "$PX" ]; then
+	if test "$PX" -gt 0 2>/dev/null; then
 		find "$DIR_IMAGES" -type f -name "${IMAGE}-$PX*.json" >"$TMP2"
 	else
 		find "$DIR_IMAGES" -type f -name "${IMAGE}*.json" >"$TMP2"
