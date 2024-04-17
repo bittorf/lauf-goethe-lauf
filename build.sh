@@ -43,6 +43,9 @@ cp -pR v2/ dest/
 	# TEMP3: fonts
 	mv google-fonts-1713205420107.css TEMP3
 
+	# TEMP4: prebuild ALL.css
+	mv style-critical.css TEMP4
+
 	# cleanup:
 	rm -f ./*.css
 
@@ -57,6 +60,9 @@ cp -pR v2/ dest/
 	echo "# head magick.css"
 	head magick.css
 	echo
+
+	# build: restore
+	mv TEMP4 style-critical.css
   }
 )
 
