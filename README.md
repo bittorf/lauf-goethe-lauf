@@ -29,3 +29,11 @@ real	0m0,183s
 * CSS: external URL: https://christianoliff.com/blog/styling-external-links-with-an-icon-in-css/
 * GoogleFonts Download: https://gwfh.mranftl.com/fonts
 * CSS inline: https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources?utm_source=lighthouse&utm_medium=lr&hl=de
+
+### pressemappe:
+
+cd GIT/v2/media
+$ ZIPFILE='pressemappe_lauf-goethe-lauf.de-bilder.zip'
+$ zip "$ZIPFILE" originals/flyer-* originals/foto-*
+$ scp "$ZIPFILE" data.lauf-goethe-lauf.de:/var/www/data.lauf-goethe-lauf.de/html/
+
