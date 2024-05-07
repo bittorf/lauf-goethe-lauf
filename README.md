@@ -30,6 +30,18 @@ real	0m0,183s
 * GoogleFonts Download: https://gwfh.mranftl.com/fonts
 * CSS inline: https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources?utm_source=lighthouse&utm_medium=lr&hl=de
 
+
+### Texte
+"Mit Eurer Teilnahme und Euren Spenden unterstützt Ihr die wichtige Arbeit von Forschung,
+ Diagnostik Therapie seltener Krebserkrankungen aller Altersgruppen. Der Reinerlös kommt
+ zu 100% der Deutschen Sarkom-Stiftung zugute."
+
+"Plötzlich steht alles still, der Weg verschwindet im Nebel, doch Stillstand ist keine Option."
+
+"Werdet Teil eines einmaligen Laufabenteuers auf Goethes Spuren. Entlang des neu inszenierten 
+ Goethe-Erlebnisweges setzt Ihr ein Zeichen im Kampf gegen Krebs."
+
+
 ### pressemappe:
 
 cd GIT/v2/media
