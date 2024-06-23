@@ -45,6 +45,7 @@ cp -pR v2/ dest/
 
 	# TEMP4: prebuild ALL.css
 	mv style-critical.css TEMP4
+	sed -i 's/font-display:swap/font-display:auto/g' TEMP4
 
 	# cleanup:
 	rm -f ./*.css
