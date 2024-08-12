@@ -19,6 +19,6 @@
  "avif": { "size": 2390, "ssimulacra2": 78.65, "butteraugli":  4.64, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-250px-quality-20-unchanged.avif" },
  "png":  { "size": 2409, "ssimulacra2": 74.24, "butteraugli":  5.41, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
  "webp": { "size": 2414, "ssimulacra2": 64.25, "butteraugli":  7.88, "method": "imagemagick-webp-c64-3%", "file": "image-imagemagick-250px-quality-3-c64.webp" },
- "bestof": [ "avifenc-avif-unchanged-20%", "pngquant-png-unchanged-1%", "imagemagick-webp-c64-3%" ]
+ "bestof": [ "avifenc-avif-unchanged-20%", "pngquant-png-unchanged-1%", "imagemagick-webp-c64-3%" ],
  "formats": [ "avif", "png", "webp" ]
 }
