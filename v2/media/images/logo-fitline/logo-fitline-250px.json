@@ -1,0 +1,19 @@
+{
+ "url": "http://show.quicky.club/www.direktbestellung-beratung.de-fitline-produkte.png-9190bytes-to-250px-stuff",
+ "original_url": "https://www.direktbestellung-beratung.de/images/fitline-produkte.png",
+ "original": "/tmp/www.direktbestellung-beratung.de-fitline-produkte.png PNG 130x138 130x138+0+0 8-bit sRGB 9190B 0.000u 0:00.000",
+ "original_size": 9190,
+ "width": 250,
+ "height": 267,
+ "original_width": 130,
+ "original_height": 138,
+ "basename": "logo-fitline-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "avif": { "size": 2636, "ssimulacra2": 87.07, "butteraugli":  2.38, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-250px-quality-50-unchanged.avif" },
+ "png":  { "size": 2827, "ssimulacra2": 66.44, "butteraugli":  5.32, "method": "pngquant-png-unchanged-3%", "file": "image-pngquant-250px-quality-3-unchanged.png" },
+ "webp": { "size": 2908, "ssimulacra2": 79.09, "butteraugli":  3.80, "method": "imagemagick-webp-c256-45%", "file": "image-imagemagick-250px-quality-45-c256.webp" },
+ "bestof": [ "avifenc-avif-unchanged-50%", "imagemagick-webp-c256-45%", "pngquant-png-unchanged-3%", "mozcjpeg-jpg-unchanged-23%", "cjpegli-jpg-unchanged-10%" ],
+ "formats": [ "avif", "png", "webp" ]
+}
