@@ -109,6 +109,9 @@ echo "# replacing image:comments with HTML:"
   ls -l *.html && \
   mv index-new.html index.html && \
   rm -f *.css
+
+  # preis und währung müssen immer zusammenstehen:
+  sed -i 's/\([0-9]\) €/\1\&nbsp;€/g' index.html
 )
 
 
