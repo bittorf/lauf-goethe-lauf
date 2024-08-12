@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/verbund.edeka-edeka_logo.jpg-266396bytes-to-250px-stuff",
+ "original_url": "https://verbund.edeka/verbund/presse/mediathek/edeka_logo.jpg?bypassIM=true",
+ "original": "/tmp/verbund.edeka-edeka_logo.jpg JPEG 657x781 657x781+0+0 8-bit CMYK 266396B 0.000u 0:00.004",
+ "original_size": 266396,
+ "width": 250,
+ "height": 301,
+ "original_width": 657,
+ "original_height": 781,
+ "basename": "logo-edeka-klinikum-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'verbund edeka edeka logo jpg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild ist das Logo des Einzelhandels 'Edeka' zu sehen. Es besteht aus einem blau-roten Rechteck mit einem roten E im weißem Feld und dem Text 'EDEKA' darunter."
+ },
+ "avif": { "size": 2600, "ssimulacra2": 86.03, "butteraugli":  2.28, "method": "avifenc-avif-unchanged-45%", "file": "image-avifenc-250px-quality-45-unchanged.avif" },
+ "webp": { "size": 3220, "ssimulacra2": 73.06, "butteraugli":  4.91, "method": "imagemagick-webp-unchanged-45%", "file": "image-imagemagick-250px-quality-45-unchanged.webp" },
+ "png":  { "size": 3224, "ssimulacra2": 51.97, "butteraugli":  6.69, "method": "pngquant-png-unchanged-7%", "file": "image-pngquant-250px-quality-7-unchanged.png" },
+ "bestof": [ "avifenc-avif-unchanged-45%", "imagemagick-webp-unchanged-45%", "pngquant-png-unchanged-7%" ],
+ "formats": [ "avif", "webp", "png" ]
+}
