@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/www.betterplace.org-orga-logo.svg-5275bytes-to-250px-stuff",
+ "original_url": "https://www.betterplace.org/c/ueber-uns/assets/orga-logo.svg",
+ "original": "/tmp/www.betterplace.org-orga-logo.svg SVG 2407x359 2407x359+0+0 8-bit sRGB 82094B 0.000u 0:00.000",
+ "original_size": 5275,
+ "width": 250,
+ "height": 37,
+ "original_width": 2407,
+ "original_height": 359,
+ "basename": "logo-betterplace-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'www betterplace org orga logo svg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt ein Logo mit dem Text 'www.betterplace.org' und einem Herz-Symbol unter ihm."
+ },
+ "avif": { "size": 1421, "ssimulacra2": 78.14, "butteraugli":  2.15, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-250px-quality-30-unchanged.avif" },
+ "png":  { "size": 1510, "ssimulacra2": 87.03, "butteraugli":  2.80, "method": "pngquant-png-c16-60%", "file": "image-pngquant-250px-quality-60-c16.png" },
+ "webp": { "size": 2336, "ssimulacra2": 52.70, "butteraugli":  2.94, "method": "imagemagick-webp-c16-60%", "file": "image-imagemagick-250px-quality-60-c16.webp" },
+ "bestof": [ "pngquant-png-c16-60%", "avifenc-avif-unchanged-30%", "imagemagick-webp-c16-60%" ],
+ "formats": [ "avif", "png", "webp" ]
+}
