@@ -1,0 +1,22 @@
+{
+ "url": "http://show.quicky.club/www.telefonica.de-logo_telefonica_o2_blue.svg-4292bytes-to-250px-stuff",
+ "original_url": "https://www.telefonica.de/static/layout/2021_telefonica/header/logo_telefonica_o2_blue.svg",
+ "original": "/tmp/www.telefonica.de-logo_telefonica_o2_blue.svg SVG 500x179 500x179+0+0 8-bit sRGB 10444B 0.000u 0:00.000",
+ "original_size": 4292,
+ "width": 250,
+ "height": 90,
+ "original_width": 500,
+ "original_height": 179,
+ "basename": "logo-o2-telefonica-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'www telefonica de logo telefonica o2 blue svg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild ist das Logo von Telefónica O2 zu sehen, welches eine blaue und weiße Kombination mit den Buchstaben 'O2' verwendet."
+ },
+ "png":  { "size": 1285, "ssimulacra2": 89.32, "butteraugli":  2.12, "method": "pngquant-png-c16-15%", "file": "image-pngquant-250px-quality-15-c16.png" },
+ "bestof": [ "pngquant-png-c16-15%", "avifenc-avif-unchanged-40%", "imagemagick-webp-c64-23%" ],
+ "formats": [ "png" ]
+}
