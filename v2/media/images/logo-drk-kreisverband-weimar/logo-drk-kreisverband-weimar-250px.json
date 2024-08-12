@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/DRK Weimar kompakt topdown.png-182253bytes-to-250px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/lauf-goethe-Logo DRK KV Weimar/DRK Weimar kompakt topdown.png PNG 2500x1828 2500x1828+0+0 8-bit sRGB 182253B 0.000u 0:00.000",
+ "original_size": 182253,
+ "width": 250,
+ "height": 183,
+ "original_width": 2500,
+ "original_height": 1828,
+ "basename": "logo-drk-kreisverband-weimar-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'DRK Weimar kompakt topdown png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt das Logo und den Namen der 'Deutschen Rotes Kreuz', einer humanitären Organisation, die in Deutschland tätig ist."
+ },
+ "avif": { "size": 2390, "ssimulacra2": 78.65, "butteraugli":  4.64, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-250px-quality-20-unchanged.avif" },
+ "png":  { "size": 2409, "ssimulacra2": 74.24, "butteraugli":  5.41, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "webp": { "size": 2414, "ssimulacra2": 64.25, "butteraugli":  7.88, "method": "imagemagick-webp-c64-3%", "file": "image-imagemagick-250px-quality-3-c64.webp" },
+ "bestof": [ "avifenc-avif-unchanged-20%", "pngquant-png-unchanged-1%", "imagemagick-webp-c64-3%" ]
+ "formats": [ "avif", "png", "webp" ]
+}
