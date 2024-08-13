@@ -1,12 +1,24 @@
 {
- "url": "http://bwireless.mooo.com/strecke1-komoot-vorschau.png-300704bytes-stuff",
- "original": "/home/bastian/Schreibtisch/lauf-webseite/strecke1-komoot-vorschau.png PNG 747x857 747x857+0+0 8-bit sRGB 300704B 0.000u 0:00.000",
- "original_size": 300704,
+ "url": "http://show.quicky.club/staffel-teil1-neu.png-458884bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/staffel-teil1-neu.png PNG 491x960 491x960+0+0 8-bit sRGB 458884B 0.000u 0:00.000",
+ "original_size": 458884,
  "width": 700,
- "height": 804,
+ "height": 1369,
+ "original_width": 491,
+ "original_height": 960,
  "basename": "strecke1-komoot-vorschau-700px",
- "avif": { "size": 13654, "ssimulacra2": 25.13, "butteraugli": 11.16, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-700px-quality-20-unchanged.avif" },
- "webp": { "size": 18994, "ssimulacra2": 19.36, "butteraugli": 10.44, "method": "imagemagick-webp-c256-8%", "file": "image-imagemagick-700px-quality-8-c256.webp" },
- "jpg":  { "size": 31055, "ssimulacra2": 47.15, "butteraugli":  7.93, "method": "mozcjpeg-jpg-c256-35%", "file": "image-mozcjpeg-700px-quality-35-c256.jpg" },
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'staffel teil1 neu png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt eine Landschaft mit einem Wanderweg, der über verschiedene Geländearten wie Felder und Wald führen muss. Auf dem Weg gibt es einige Schilder oder Markierungen, die möglicherweise Informationen zum Wanderweg beinhalten."
+ },
+ "avif": { "size": 53984, "ssimulacra2": 76.24, "butteraugli":  3.25, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-700px-quality-50-unchanged.avif" },
+ "webp": { "size": 59958, "ssimulacra2": 65.54, "butteraugli":  4.40, "method": "imagemagick-webp-unchanged-55%", "file": "image-imagemagick-700px-quality-55-unchanged.webp" },
+ "jpg":  { "size": 61482, "ssimulacra2": 66.54, "butteraugli":  3.91, "method": "cjpegli-jpg-unchanged-30%", "file": "image-cjpegli-700px-quality-30-unchanged.jpg" },
+ "bestof": [ "avifenc-avif-unchanged-50%", "cjpegli-jpg-unchanged-30%", "imagemagick-webp-unchanged-55%", "mozcjpeg-jpg-unchanged-40%", "imagemagick-jpg-unchanged-30%" ],
  "formats": [ "avif", "webp", "jpg" ]
 }
