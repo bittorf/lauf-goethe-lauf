@@ -1,12 +1,24 @@
 {
- "url": "http://bwireless.mooo.com/strecke2-komoot-vorschau.png-343997bytes-stuff",
- "original": "/home/bastian/Schreibtisch/lauf-webseite/strecke2-komoot-vorschau.png PNG 741x854 741x854+0+0 8-bit sRGB 343997B 0.000u 0:00.000",
- "original_size": 343997,
+ "url": "http://show.quicky.club/staffel-teil2-neu.png-527457bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/staffel-teil2-neu.png PNG 469x937 469x937+0+0 8-bit sRGB 527457B 0.000u 0:00.000",
+ "original_size": 527457,
  "width": 700,
- "height": 804,
+ "height": 1399,
+ "original_width": 469,
+ "original_height": 937,
  "basename": "strecke2-komoot-vorschau-700px",
- "avif": { "size": 14378, "ssimulacra2": 20.02, "butteraugli": 12.22, "method": "avifenc-avif-unchanged-23%", "file": "image-avifenc-700px-quality-23-unchanged.avif" },
- "webp": { "size": 18398, "ssimulacra2": 12.28, "butteraugli": 11.85, "method": "imagemagick-webp-c256-8%", "file": "image-imagemagick-700px-quality-8-c256.webp" },
- "jpg":  { "size": 31260, "ssimulacra2": 42.52, "butteraugli":  7.72, "method": "mozcjpeg-jpg-c256-35%", "file": "image-mozcjpeg-700px-quality-35-c256.jpg" },
- "formats": [ "avif", "webp", "jpg" ]
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'staffel teil2 neu png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt eine Karte mit einer roten Strecke, die von einem bestimmten Punkt beginnt und zu einem anderen Punkt führt. Die Strecke scheint durch Landschaften und Dörfer zu verlaufen. Es gibt auch einige grüne Bereiche, die möglicherweise Wälder oder Felder sind, und Straßen- oder Flusslaufsindikationen, die den Kontext der Reiseroute beschreiben."
+ },
+ "avif": { "size": 61966, "ssimulacra2": 76.51, "butteraugli":  3.21, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-700px-quality-50-unchanged.avif" },
+ "jpg":  { "size": 68595, "ssimulacra2": 64.00, "butteraugli":  4.41, "method": "cjpegli-jpg-unchanged-25%", "file": "image-cjpegli-700px-quality-25-unchanged.jpg" },
+ "webp": { "size": 70232, "ssimulacra2": 66.64, "butteraugli":  4.37, "method": "imagemagick-webp-unchanged-55%", "file": "image-imagemagick-700px-quality-55-unchanged.webp" },
+ "bestof": [ "avifenc-avif-unchanged-50%", "imagemagick-webp-unchanged-55%", "cjpegli-jpg-unchanged-25%", "mozcjpeg-jpg-unchanged-40%", "imagemagick-jpg-unchanged-30%" ],
+ "formats": [ "avif", "jpg", "webp" ]
 }
