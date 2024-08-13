@@ -179,7 +179,7 @@ while read -r LINE <&4; do {
 
 		case "$TEMPLATE" in
 			*favicon*) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#$(   out_escaped )#g"   "$TMP3" ;;
-			        *) sed -i "s#<!-- image:$IMAGE template:$TEMPLATE -->#\n$( out_escaped )\n#g" "$TMP3" ;;
+			        *) sed -i "s|<!-- image:$IMAGE template:$TEMPLATE -->|\n$( out_escaped )\n|g" "$TMP3" ;;
 		esac
 
 		[ "$OPTION" = autodelete ] && log "[DEBUG] todo: autodelete '$TEMPLATE' - '$DIR/$BASENAME.$FORMAT'"
