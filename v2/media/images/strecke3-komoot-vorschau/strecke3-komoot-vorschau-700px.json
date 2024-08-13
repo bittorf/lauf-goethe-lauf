@@ -1,12 +1,24 @@
 {
- "url": "http://bwireless.mooo.com/strecke3-komoot-vorschau.png-313909bytes-stuff",
- "original": "/home/bastian/Schreibtisch/lauf-webseite/strecke3-komoot-vorschau.png PNG 739x854 739x854+0+0 8-bit sRGB 313909B 0.000u 0:00.000",
- "original_size": 313909,
+ "url": "http://show.quicky.club/staffel-teil3-neu.png-422724bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/staffel-teil3-neu.png PNG 423x901 423x901+0+0 8-bit sRGB 422724B 0.000u 0:00.000",
+ "original_size": 422724,
  "width": 700,
- "height": 804,
+ "height": 1491,
+ "original_width": 423,
+ "original_height": 901,
  "basename": "strecke3-komoot-vorschau-700px",
- "avif": { "size": 14334, "ssimulacra2": 29.53, "butteraugli": 10.84, "method": "avifenc-avif-unchanged-20%", "file": "image-avifenc-700px-quality-20-unchanged.avif" },
- "webp": { "size": 19492, "ssimulacra2": 21.77, "butteraugli": 11.28, "method": "imagemagick-webp-c256-8%", "file": "image-imagemagick-700px-quality-8-c256.webp" },
- "jpg":  { "size": 31994, "ssimulacra2": 47.65, "butteraugli":  7.75, "method": "mozcjpeg-jpg-c256-35%", "file": "image-mozcjpeg-700px-quality-35-c256.jpg" },
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'staffel teil3 neu png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sind eine Karte und ein Verlaufsplan zu sehen. Der Plan zeigt einen Weg durch die Landschaft, der auf einer Straßenkarte verläuft. Es scheint eine Wanderstrecke oder eine Tour zu sein, da es eine bestimmte Streckenlänge von 12,7 km anzeigt."
+ },
+ "avif": { "size": 55502, "ssimulacra2": 78.18, "butteraugli":  3.54, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-700px-quality-50-unchanged.avif" },
+ "webp": { "size": 58208, "ssimulacra2": 65.63, "butteraugli":  4.33, "method": "imagemagick-webp-unchanged-45%", "file": "image-imagemagick-700px-quality-45-unchanged.webp" },
+ "jpg":  { "size": 59144, "ssimulacra2": 62.74, "butteraugli":  4.48, "method": "cjpegli-jpg-unchanged-20%", "file": "image-cjpegli-700px-quality-20-unchanged.jpg" },
+ "bestof": [ "avifenc-avif-unchanged-50%", "imagemagick-webp-unchanged-45%", "cjpegli-jpg-unchanged-20%", "mozcjpeg-jpg-unchanged-30%", "imagemagick-jpg-unchanged-23%" ],
  "formats": [ "avif", "webp", "jpg" ]
 }
