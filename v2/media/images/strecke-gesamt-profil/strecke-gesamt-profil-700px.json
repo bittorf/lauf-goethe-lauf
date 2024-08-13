@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/lauf-hoehenprofil-neu.png-32825bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/lauf-hoehenprofil-neu.png PNG 1124x288 1124x288+0+0 8-bit sRGB 32825B 0.000u 0:00.000",
+ "original_size": 32825,
+ "width": 700,
+ "height": 180,
+ "original_width": 1124,
+ "original_height": 288,
+ "basename": "strecke-gesamt-profil-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'lauf hoehenprofil neu png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Entschuldigung, aber ich habe keine Möglichkeit, Bilder zu analysieren oder Interaktionen mit visuellen Inhalten zu haben. Bitte teilen Sie mir mehr Informationen oder Fragen, die ich beantworten kann."
+ },
+ "avif": { "size": 2566, "ssimulacra2": 71.04, "butteraugli":  5.05, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "png":  { "size": 2730, "ssimulacra2": 76.12, "butteraugli":  6.16, "method": "pngquant-png-unchanged-3%", "file": "image-pngquant-700px-quality-3-unchanged.png" },
+ "webp": { "size": 2750, "ssimulacra2": 57.69, "butteraugli":  8.27, "method": "imagemagick-webp-c64-18%", "file": "image-imagemagick-700px-quality-18-c64.webp" },
+ "bestof": [ "pngquant-png-unchanged-3%", "avifenc-avif-unchanged-35%", "imagemagick-webp-c64-18%" ],
+ "formats": [ "avif", "png", "webp" ]
+}
