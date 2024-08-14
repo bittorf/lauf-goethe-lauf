@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/die-buchaer.de-logo-print.png-27127bytes-to-250px-stuff",
+ "original_url": "https://die-buchaer.de/wp-content/themes/genesis-agb/images/logo-print.png",
+ "original": "/tmp/die-buchaer.de-logo-print.png PNG 933x321 933x321+0+0 8-bit sRGB 27127B 0.000u 0:00.000",
+ "original_size": 27127,
+ "width": 250,
+ "height": 79,
+ "original_width": 933,
+ "original_height": 321,
+ "basename": "logo-agrargenossenschaft-bucha-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'die buchaer de logo print png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man den Logo der AgB mit einer Untertitelung 'Die BUCHHÄLTER'."
+ },
+ "avif": { "size": 1868, "ssimulacra2": 76.44, "butteraugli":  2.91, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-250px-quality-30-unchanged.avif" },
+ "webp": { "size": 1882, "ssimulacra2": 56.66, "butteraugli":  6.42, "method": "imagemagick-webp-c16-13%", "file": "image-imagemagick-250px-quality-13-c16.webp" },
+ "png":  { "size": 1899, "ssimulacra2": 76.13, "butteraugli":  5.12, "method": "pngquant-png-c16-2%", "file": "image-pngquant-250px-quality-2-c16.png" },
+ "bestof": [ "avifenc-avif-unchanged-30%", "pngquant-png-c16-2%", "imagemagick-webp-c16-13%" ],
+ "formats": [ "avif", "webp", "png" ]
+}
