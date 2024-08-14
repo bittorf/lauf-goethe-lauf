@@ -1,0 +1,25 @@
+{
+ "url": "http://show.quicky.club/www.physiolange-weimar.de-logo.png-13958bytes-to-250px-stuff",
+ "original_url": "https://www.physiolange-weimar.de/bilder/logo.png",
+ "original": "/tmp/www.physiolange-weimar.de-logo.png PNG 480x120 480x120+0+0 8-bit sRGB 13958B 0.000u 0:00.000",
+ "original_size": 13958,
+ "width": 250,
+ "height": 90,
+ "original_width": 480,
+ "original_height": 120,
+ "basename": "logo-physiotherapie-eva-maria-lange-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'www physiolange weimar de logo png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt das Logo einer Physiotherapie-Praxis. Es ist eine Kombination aus einem Abbild des menschlichen Körpers in einer gestreckten Position und dem Text 'Physiotherapie Zentrum' in Deutsch."
+ },
+ "avif": { "size": 2054, "ssimulacra2": 79.40, "butteraugli":  2.54, "method": "avifenc-avif-unchanged-30%", "file": "image-avifenc-250px-quality-30-unchanged.avif" },
+ "png":  { "size": 2267, "ssimulacra2": 89.74, "butteraugli":  2.84, "method": "pngquant-png-unchanged-5%", "file": "image-pngquant-250px-quality-5-unchanged.png" },
+ "webp": { "size": 2352, "ssimulacra2": 52.29, "butteraugli":  6.55, "method": "imagemagick-webp-unchanged-18%", "file": "image-imagemagick-250px-quality-18-unchanged.webp" },
+ "jpg":  { "size": 2357, "ssimulacra2": 55.55, "butteraugli":  6.47, "method": "mozcjpeg-jpg-c32-20%", "file": "image-mozcjpeg-250px-quality-20-c32.jpg" },
+ "bestof": [ "pngquant-png-unchanged-5%", "avifenc-avif-unchanged-30%", "mozcjpeg-jpg-c32-20%", "imagemagick-webp-unchanged-18%" ],
+ "formats": [ "avif", "png", "webp", "jpg" ]
+}
