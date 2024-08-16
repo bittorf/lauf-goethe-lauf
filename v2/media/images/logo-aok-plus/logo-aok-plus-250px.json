@@ -1,0 +1,25 @@
+{
+ "url": "http://show.quicky.club/Logo_AOKPLUS_Fremdkontext_Vert_Gruen-RGB.svg-13613bytes-to-250px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/Logo_AOKPLUS_Fremdkontext_Vert_Gruen-RGB.svg SVG 766x394 766x394+0+0 8-bit sRGB 40475B 0.000u 0:00.000",
+ "original_size": 13613,
+ "width": 250,
+ "height": 129,
+ "original_width": 766,
+ "original_height": 394,
+ "basename": "logo-aok-plus-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'Logo AOKPLUS Fremdkontext Vert Gruen RGB svg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man ein Logo, das den Text 'AOK PLUS' enthält. Es ist ein Schriftzug mit unterschiedlichen Schriftgrößen und Farben (Gruen und RGB)."
+ },
+ "avif": { "size": 1544, "ssimulacra2": 71.18, "butteraugli":  4.46, "method": "avifenc-avif-unchanged-23%", "file": "image-avifenc-250px-quality-23-unchanged.avif" },
+ "webp": { "size": 1600, "ssimulacra2": 67.24, "butteraugli":  5.35, "method": "imagemagick-webp-unchanged-8%", "file": "image-imagemagick-250px-quality-8-unchanged.webp" },
+ "jpg":  { "size": 1615, "ssimulacra2": 55.63, "butteraugli":  6.90, "method": "mozcjpeg-jpg-c8-15%", "file": "image-mozcjpeg-250px-quality-15-c8.jpg" },
+ "png":  { "size": 1627, "ssimulacra2": 86.79, "butteraugli":  2.77, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "bestof": [ "pngquant-png-unchanged-1%", "avifenc-avif-unchanged-23%", "imagemagick-webp-unchanged-8%", "mozcjpeg-jpg-c8-15%" ],
+ "formats": [ "avif", "webp", "jpg", "png" ]
+}
