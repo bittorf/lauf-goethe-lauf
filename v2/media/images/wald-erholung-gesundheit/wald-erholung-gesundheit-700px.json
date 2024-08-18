@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-16 at 22.45.01(4).jpeg-502506bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/WhatsApp Image 2024-08-16 at 22.45.01(4).jpeg JPEG 1600x1200 1600x1200+0+0 8-bit sRGB 502506B 0.000u 0:00.000",
+ "original_size": 502506,
+ "width": 700,
+ "height": 525,
+ "original_width": 1600,
+ "original_height": 1200,
+ "basename": "wald-erholung-gesundheit-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 16 at 22 45 01(4) jpeg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt eine Gruppe von Personen, die auf einem Klettergerüst (Kletterhügel) liegen. Sie scheinen entspannt zu sein und genießen einen Moment der Ruhe und Relaxation in einer Naturumgebung, wie ein Wald oder ein Campingplatz."
+ },
+ "webp": { "size": 68672, "ssimulacra2": 54.02, "butteraugli":  6.37, "method": "imagemagick-webp-unchanged-35%", "file": "image-imagemagick-700px-quality-35-unchanged.webp" },
+ "jpg":  { "size": 70409, "ssimulacra2": 55.86, "butteraugli":  7.87, "method": "mozcjpeg-jpg-unchanged-60%", "file": "image-mozcjpeg-700px-quality-60-unchanged.jpg" },
+ "avif": { "size": 71391, "ssimulacra2": 65.70, "butteraugli":  4.27, "method": "avifenc-avif-unchanged-40%", "file": "image-avifenc-700px-quality-40-unchanged.avif" },
+ "bestof": [ "avifenc-avif-unchanged-40%", "mozcjpeg-jpg-unchanged-60%", "imagemagick-webp-unchanged-35%", "imagemagick-jpg-unchanged-45%", "cjpegli-jpg-unchanged-60%" ],
+ "formats": [ "webp", "jpg", "avif" ]
+}
