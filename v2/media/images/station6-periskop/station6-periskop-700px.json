@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-16 at 22.45.01(5).jpeg-370192bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/WhatsApp Image 2024-08-16 at 22.45.01(5).jpeg JPEG 1200x1600 1200x1600+0+0 8-bit sRGB 370192B 0.000u 0:00.000",
+ "original_size": 370192,
+ "width": 700,
+ "height": 933,
+ "original_width": 1200,
+ "original_height": 1600,
+ "basename": "station6-periskop-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 16 at 22 45 01(5) jpeg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man eine Informationstafel mit einem Schild, auf dem ein Pinguin-Symbol zu sehen ist. Die Tafel steht inmitten einer grünen Fläche, die von Heidekraut bedeckt ist, und es sind einige Bäume und Büsche im Umfeld. Der Himmel ist blau mit einigen Wolken."
+ },
+ "avif": { "size": 70629, "ssimulacra2": 59.74, "butteraugli":  6.01, "method": "avifenc-avif-unchanged-40%", "file": "image-avifenc-700px-quality-40-unchanged.avif" },
+ "jpg":  { "size": 75945, "ssimulacra2": 55.71, "butteraugli":  6.11, "method": "mozcjpeg-jpg-unchanged-55%", "file": "image-mozcjpeg-700px-quality-55-unchanged.jpg" },
+ "webp": { "size": 80000, "ssimulacra2": 56.04, "butteraugli":  4.84, "method": "imagemagick-webp-unchanged-40%", "file": "image-imagemagick-700px-quality-40-unchanged.webp" },
+ "bestof": [ "avifenc-avif-unchanged-40%", "imagemagick-webp-unchanged-40%", "mozcjpeg-jpg-unchanged-55%", "cjpegli-jpg-unchanged-55%", "imagemagick-jpg-unchanged-40%" ],
+ "formats": [ "avif", "jpg", "webp" ]
+}
