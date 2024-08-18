@@ -21,5 +21,5 @@
  "webp": { "size": 78202, "ssimulacra2": 57.31, "butteraugli":  4.06, "method": "imagemagick-webp-unchanged-40%", "file": "image-imagemagick-700px-quality-40-unchanged.webp" },
  "jpg":  { "size": 78784, "ssimulacra2": 62.46, "butteraugli":  4.21, "method": "mozcjpeg-jpg-unchanged-60%", "file": "image-mozcjpeg-700px-quality-60-unchanged.jpg" },
  "bestof": [ "avifenc-avif-unchanged-40%", "mozcjpeg-jpg-unchanged-60%", "cjpegli-jpg-unchanged-55%", "imagemagick-webp-unchanged-40%", "imagemagick-jpg-unchanged-40%" ],
- "formats": [ "avif", "jpg", "webp", "jpg" ]
+ "formats": [ "avif", "jpg", "webp" ]
 }
