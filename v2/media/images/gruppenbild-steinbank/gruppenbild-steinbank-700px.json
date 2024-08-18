@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-16 at 22.45.01.jpeg-221609bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/WhatsApp Image 2024-08-16 at 22.45.01.jpeg JPEG 1213x818 1213x818+0+0 8-bit sRGB 221609B 0.000u 0:00.000",
+ "original_size": 221609,
+ "width": 700,
+ "height": 472,
+ "original_width": 1213,
+ "original_height": 818,
+ "basename": "gruppenbild-steinbank-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 16 at 22 45 01 jpeg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt eine Gruppe von Personen, die sich auf einem Gravelweg sitzen. Sie scheinen Teil eines Rennteams oder einer Laufgruppe zu sein. Die Person in der Mitte ist amüsiert und gibt den 'OK' Zeichen mit ihrer Hand. Alle haben Sportausrüstung an, wie bequeme Shorts, T-Shirts, Runningschuhe und Sonnenbrillen. Der Umgebung entspricht ein offener Raum, wahrscheinlich eine Landschaft für Outdooraktivitäten."
+ },
+ "avif": { "size": 40990, "ssimulacra2": 57.57, "butteraugli":  6.00, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "jpg":  { "size": 46496, "ssimulacra2": 57.72, "butteraugli":  4.94, "method": "mozcjpeg-jpg-unchanged-50%", "file": "image-mozcjpeg-700px-quality-50-unchanged.jpg" },
+ "webp": { "size": 46620, "ssimulacra2": 54.35, "butteraugli":  5.60, "method": "imagemagick-webp-unchanged-30%", "file": "image-imagemagick-700px-quality-30-unchanged.webp" },
+ "bestof": [ "mozcjpeg-jpg-unchanged-50%", "avifenc-avif-unchanged-35%", "cjpegli-jpg-unchanged-45%", "imagemagick-webp-unchanged-30%", "imagemagick-jpg-unchanged-35%" ],
+ "formats": [ "avif", "jpg", "webp" ]
+}
