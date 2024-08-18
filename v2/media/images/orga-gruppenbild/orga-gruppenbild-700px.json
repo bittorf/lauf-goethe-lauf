@@ -1,0 +1,25 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-16 at 22.45.01(1).jpeg-245606bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/WhatsApp Image 2024-08-16 at 22.45.01(1).jpeg JPEG 1015x1027 1015x1027+0+0 8-bit sRGB 245606B 0.000u 0:00.000",
+ "original_size": 245606,
+ "width": 700,
+ "height": 708,
+ "original_width": 1015,
+ "original_height": 1027,
+ "basename": "orga-gruppenbild-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 16 at 22 45 01(1) jpeg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man eine Gruppe von sechs Menschen, die auf einer Wetterfahne posieren. Sie sind alle in verschiedenen Sportbekleidungen und einige tragen Schuhe, was darauf hindeutet, dass sie sich entspannen oder nach einem Spaziergang oder Lauf erholen. Die Umgebung scheint belebt mit grüner Vegetation und hügeligen Landschaft im Hintergrund, was eine ländliche Atmosphäre vermittelt."
+ },
+ "avif": { "size": 68270, "ssimulacra2": 62.78, "butteraugli":  5.67, "method": "avifenc-avif-unchanged-40%", "file": "image-avifenc-700px-quality-40-unchanged.avif" },
+ "jpg":  { "size": 75817, "ssimulacra2": 60.02, "butteraugli":  4.30, "method": "cjpegli-jpg-unchanged-55%", "file": "image-cjpegli-700px-quality-55-unchanged.jpg" },
+ "webp": { "size": 78202, "ssimulacra2": 57.31, "butteraugli":  4.06, "method": "imagemagick-webp-unchanged-40%", "file": "image-imagemagick-700px-quality-40-unchanged.webp" },
+ "jpg":  { "size": 78784, "ssimulacra2": 62.46, "butteraugli":  4.21, "method": "mozcjpeg-jpg-unchanged-60%", "file": "image-mozcjpeg-700px-quality-60-unchanged.jpg" },
+ "bestof": [ "avifenc-avif-unchanged-40%", "mozcjpeg-jpg-unchanged-60%", "cjpegli-jpg-unchanged-55%", "imagemagick-webp-unchanged-40%", "imagemagick-jpg-unchanged-40%" ],
+ "formats": [ "avif", "jpg", "webp", "jpg" ]
+}
