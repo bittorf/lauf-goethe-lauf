@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-16 at 22.45.01(3).jpeg-492826bytes-to-700px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Desktop/WhatsApp Image 2024-08-16 at 22.45.01(3).jpeg JPEG 1200x1600 1200x1600+0+0 8-bit sRGB 492826B 0.000u 0:00.000",
+ "original_size": 492826,
+ "width": 700,
+ "height": 933,
+ "original_width": 1200,
+ "original_height": 1600,
+ "basename": "station-waldbad-schild-700px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 16 at 22 45 01(3) jpeg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild kann man eine Wegweiserin in einem Wald sehen. Es gibt einen Text 'Waldbad' auf der Wegweiserin und auch eine Karte mit einer Route, die durch den Wald führt. Der Himmel ist klar und es sieht nach einem sonnigen Tag aus."
+ },
+ "avif": { "size": 97954, "ssimulacra2": 59.40, "butteraugli":  5.28, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-700px-quality-35-unchanged.avif" },
+ "webp": { "size": 106892, "ssimulacra2": 54.70, "butteraugli":  4.56, "method": "imagemagick-webp-unchanged-30%", "file": "image-imagemagick-700px-quality-30-unchanged.webp" },
+ "jpg":  { "size": 106981, "ssimulacra2": 60.53, "butteraugli":  5.09, "method": "mozcjpeg-jpg-unchanged-55%", "file": "image-mozcjpeg-700px-quality-55-unchanged.jpg" },
+ "bestof": [ "mozcjpeg-jpg-unchanged-55%", "avifenc-avif-unchanged-35%", "cjpegli-jpg-unchanged-55%", "imagemagick-jpg-unchanged-40%", "imagemagick-webp-unchanged-30%" ],
+ "formats": [ "avif", "webp", "jpg" ]
+}
