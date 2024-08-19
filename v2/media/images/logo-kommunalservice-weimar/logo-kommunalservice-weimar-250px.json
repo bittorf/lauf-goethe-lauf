@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/ks-weimar.de-logo_ksw.svg-6944bytes-to-250px-stuff",
+ "original_url": "https://ks-weimar.de/typo3conf/ext/pview/Resources/Public/Images/logo_ksw.svg",
+ "original": "/tmp/ks-weimar.de-logo_ksw.svg SVG 230x53 230x53+0+0 8-bit sRGB 6614B 0.000u 0:00.000",
+ "original_size": 6944,
+ "width": 250,
+ "height": 58,
+ "original_width": 230,
+ "original_height": 53,
+ "basename": "logo-kommunalservice-weimar-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'ks weimar de logo ksw svg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man ein Stadtlogo mit dem Namen 'Weimar' und einer grafischen Darstellung, die möglicherweise die Stadtansicht oder ein Symbol repräsentiert."
+ },
+ "avif": { "size": 1486, "ssimulacra2": 81.69, "butteraugli":  2.31, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-250px-quality-35-unchanged.avif" },
+ "png":  { "size": 1663, "ssimulacra2": 91.36, "butteraugli":  2.36, "method": "pngquant-png-c64-14%", "file": "image-pngquant-250px-quality-14-c64.png" },
+ "webp": { "size": 2076, "ssimulacra2": 51.78, "butteraugli":  3.22, "method": "imagemagick-webp-unchanged-30%", "file": "image-imagemagick-250px-quality-30-unchanged.webp" },
+ "bestof": [ "pngquant-png-c64-14%", "avifenc-avif-unchanged-35%", "imagemagick-webp-unchanged-30%" ],
+ "formats": [ "avif", "png", "webp" ]
+}
