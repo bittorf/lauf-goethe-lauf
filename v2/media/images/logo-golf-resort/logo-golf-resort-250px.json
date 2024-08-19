@@ -1,0 +1,25 @@
+{
+ "url": "http://show.quicky.club/www.golfresort-weimarerland.de-Weimarer_Land_dunkelgruen.jpg-394456bytes-to-250px-stuff",
+ "original_url": "https://www.golfresort-weimarerland.de/fileadmin/content/Golf/Bilder/Presse/Logo/2024/Weimarer_Land_dunkelgruen.jpg",
+ "original": "/tmp/www.golfresort-weimarerland.de-Weimarer_Land_dunkelgruen.jpg JPEG 2395x1523 2395x1523+0+0 8-bit sRGB 394456B 0.000u 0:00.000",
+ "original_size": 394456,
+ "width": 250,
+ "height": 155,
+ "original_width": 2395,
+ "original_height": 1523,
+ "basename": "logo-golf-resort-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'www golfresort weimarerland de Weimarer Land dunkelgruen jpg'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt ein Logo mit dem Namen 'WEIMARER LAND SPORT & GOLF RESORT' und einem Symbole, das aus einem Baumblatt besteht. Der Schriftzug ist in einer kräftigen Schriftart gehalten."
+ },
+ "png":  { "size": 2503, "ssimulacra2": 79.37, "butteraugli":  4.15, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "avif": { "size": 2516, "ssimulacra2": 77.85, "butteraugli":  3.96, "method": "avifenc-avif-unchanged-25%", "file": "image-avifenc-250px-quality-25-unchanged.avif" },
+ "webp": { "size": 2610, "ssimulacra2": 69.69, "butteraugli":  5.37, "method": "imagemagick-webp-c256-6%", "file": "image-imagemagick-250px-quality-6-c256.webp" },
+ "jpg":  { "size": 2694, "ssimulacra2": 55.78, "butteraugli":  7.31, "method": "mozcjpeg-jpg-c32-20%", "file": "image-mozcjpeg-250px-quality-20-c32.jpg" },
+ "bestof": [ "pngquant-png-unchanged-1%", "avifenc-avif-unchanged-25%", "imagemagick-webp-c256-6%", "mozcjpeg-jpg-c32-20%" ],
+ "formats": [ "png", "avif", "webp", "jpg" ]
+}
