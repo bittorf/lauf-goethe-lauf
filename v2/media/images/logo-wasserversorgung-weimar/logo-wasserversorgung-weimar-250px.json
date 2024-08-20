@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/portal.wasserversorgung-weimar.de-logo.webp-10028bytes-to-250px-stuff",
+ "original_url": "https://portal.wasserversorgung-weimar.de/images/logo.webp",
+ "original": "/tmp/portal.wasserversorgung-weimar.de-logo.webp WEBP 300x123 300x123+0+0 8-bit sRGB 10028B 0.000u 0:00.001",
+ "original_size": 10028,
+ "width": 250,
+ "height": 103,
+ "original_width": 300,
+ "original_height": 123,
+ "basename": "logo-wasserversorgung-weimar-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'portal wasserversorgung weimar de logo webp'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt eine Kombination aus einem Wasserwesen-Logo und einem Wappenschild mit der Aufschrift 'WESER VERSORGUNGSVERBAND ZWECK ZWICKER WEB'. Es scheint ein Logo für einen Zweckverband, der sich auf die Versorgung von Wasserversorgungsunternehmen konzentriert."
+ },
+ "avif": { "size": 2673, "ssimulacra2": 78.47, "butteraugli":  2.42, "method": "avifenc-avif-unchanged-45%", "file": "image-avifenc-250px-quality-45-unchanged.avif" },
+ "png":  { "size": 3270, "ssimulacra2": 78.13, "butteraugli":  2.05, "method": "pngquant-png-c256-5%", "file": "image-pngquant-250px-quality-5-c256.png" },
+ "webp": { "size": 3352, "ssimulacra2": 52.03, "butteraugli":  3.80, "method": "imagemagick-webp-c256-45%", "file": "image-imagemagick-250px-quality-45-c256.webp" },
+ "bestof": [ "avifenc-avif-unchanged-45%", "pngquant-png-c256-5%", "imagemagick-webp-c256-45%" ],
+ "formats": [ "avif", "png", "webp" ]
+}
