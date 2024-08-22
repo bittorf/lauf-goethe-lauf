@@ -1,0 +1,23 @@
+{
+ "url": "http://show.quicky.club/baeckerei-bergmann.de-bergmann-logo.png-21983bytes-to-250px-stuff",
+ "original_url": "https://baeckerei-bergmann.de/img/bergmann-logo.png",
+ "original": "/tmp/baeckerei-bergmann.de-bergmann-logo.png PNG 399x72 399x72+0+0 8-bit sRGB 21983B 0.000u 0:00.000",
+ "original_size": 21983,
+ "width": 250,
+ "height": 45,
+ "original_width": 399,
+ "original_height": 72,
+ "basename": "logo-baeckerei-bergmann-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'baeckerei bergmann de bergmann logo png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Das Bild zeigt das Logo des Unternehmens 'Bergmann' auf einem Behälter oder einer Verpackung."
+ },
+ "png":  { "size": 1417, "ssimulacra2": 64.30, "butteraugli":  2.68, "method": "pngquant-png-unchanged-4%", "file": "image-pngquant-250px-quality-4-unchanged.png" },
+ "avif": { "size": 1568, "ssimulacra2": 52.66, "butteraugli":  3.61, "method": "avifenc-avif-unchanged-25%", "file": "image-avifenc-250px-quality-25-unchanged.avif" },
+ "bestof": [ "png" ],
+ "formats": [ "png", "avif" ]
+}
