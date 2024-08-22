@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/www.nahkauf.de-logo.png-23782bytes-to-250px-stuff",
+ "original_url": "https://www.nahkauf.de/.resources/nahkauf/webresources/assets/images/logo.png",
+ "original": "/tmp/www.nahkauf.de-logo.png PNG 261x140 261x140+0+0 8-bit sRGB 23782B 0.000u 0:00.000",
+ "original_size": 23782,
+ "width": 250,
+ "height": 131,
+ "original_width": 261,
+ "original_height": 140,
+ "basename": "logo-nahkauf-heyer-weimar-250px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'www nahkauf de logo png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild sieht man eine Marke mit dem Namen 'nahkauf', das 'noch kaufen' bedeutet. Darunter steht 'nicht mehr erhältlich', was darauf hinweist, dass die Marke nicht mehr erhältlich ist."
+ },
+ "webp": { "size": 1700, "ssimulacra2": 60.69, "butteraugli":  5.83, "method": "imagemagick-webp-c64-14%", "file": "image-imagemagick-250px-quality-14-c64.webp" },
+ "avif": { "size": 1705, "ssimulacra2": 70.88, "butteraugli":  5.07, "method": "avifenc-avif-unchanged-35%", "file": "image-avifenc-250px-quality-35-unchanged.avif" },
+ "png":  { "size": 1730, "ssimulacra2": 63.71, "butteraugli": 10.37, "method": "pngquant-png-unchanged-1%", "file": "image-pngquant-250px-quality-1-unchanged.png" },
+ "bestof": [ "avifenc-avif-unchanged-35%", "pngquant-png-unchanged-1%", "imagemagick-webp-c64-14%" ],
+ "formats": [ "webp", "avif", "png" ]
+}
