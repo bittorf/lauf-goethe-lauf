@@ -1,0 +1,24 @@
+{
+ "url": "http://show.quicky.club/WhatsApp Image 2024-08-20 at 21.32.47-ball-crop.png-363884bytes-to-682px-stuff",
+ "original_url": null,
+ "original": "/home/bastian/Schreibtisch/WhatsApp Image 2024-08-20 at 21.32.47-ball-crop.png PNG 682x426 682x426+0+0 8-bit sRGB 363884B 0.010u 0:00.003",
+ "original_size": 363884,
+ "width": 682,
+ "height": 426,
+ "original_width": 682,
+ "original_height": 426,
+ "basename": "fussball-nationalmannschaft-unterschriften-682px",
+ "html_alt": "",
+ "html_title": "",
+ "html_loading": "",
+ "description": {
+ "prompt": "Das Bild heisst 'WhatsApp Image 2024 08 20 at 21 32 47 ball crop png'. Was ist auf diesem Bild zu sehen? Antworte kurz und in deutscher Sprache!",
+ "comment": "Die automatische Beschreibung durch das LLM llava:13b ist mit Vorsicht zu geniessen!",
+ "de": "Auf dem Bild ist ein Ball zu sehen, der mit verschiedenen Farben und Mustern gestaltet ist. Der Ball hat den Schriftzug 'EURO 2024' auf ihm, was darauf hindeutet, dass es sich um eine Spielball für ein Fußballspiel im Jahr 2024 beziehungsweise die Fußball-Europameisterschaft 2024 handelt. Der Ball ist auch mit autographierten Handschriften verziert, die wahrscheinlich von verschiedenen Personen stammen, wie es der Fall sein könnte bei einem offiziellen Autogrammball für eine Veranstaltung."
+ },
+ "avif": { "size": 23908, "ssimulacra2": 75.04, "butteraugli":  3.66, "method": "avifenc-avif-unchanged-50%", "file": "image-avifenc-682px-quality-50-unchanged.avif" },
+ "jpg":  { "size": 24588, "ssimulacra2": 60.76, "butteraugli":  4.30, "method": "mozcjpeg-jpg-unchanged-45%", "file": "image-mozcjpeg-682px-quality-45-unchanged.jpg" },
+ "webp": { "size": 24746, "ssimulacra2": 64.19, "butteraugli":  4.22, "method": "imagemagick-webp-unchanged-50%", "file": "image-imagemagick-682px-quality-50-unchanged.webp" },
+ "bestof": [ "avifenc-avif-unchanged-50%", "imagemagick-webp-unchanged-50%", "mozcjpeg-jpg-unchanged-45%", "cjpegli-jpg-unchanged-30%", "imagemagick-jpg-unchanged-30%" ],
+ "formats": [ "avif", "jpg", "webp" ]
+}
